@@ -5,4 +5,4 @@ This is just the backend, development is still active, please don't use because 
 
 I will contiune to add more features and make it more secure.
 
-Support and installation (PAID)- +2348067707813.
+Support and installation (PAID)- wallace@brickng.com
