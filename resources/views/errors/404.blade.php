@@ -5,6 +5,7 @@
     <title>404 Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ asset('css/404.css') }}">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -216,7 +217,8 @@
 <div class="content">
     <h3>Hello?? Is somebody there?!?</h3>
     <p>We know it’s scary, but the page you’re trying to reach can’t be found. Perhaps it was just a bad <span>link</span> dream?</p>
+    <p>Please take me <a href="{{route('/')}}">HOME</a> </p>
 </div>
-<link rel="script" href="{{ asset('js/404.js') }}">
+<script src="{{ asset('js/404.js') }}"></script>
 </body>
 </html>
