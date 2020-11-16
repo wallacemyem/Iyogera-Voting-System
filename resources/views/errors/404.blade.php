@@ -217,7 +217,7 @@
 <div class="content">
     <h3>Hello?? Is somebody there?!?</h3>
     <p>We know it’s scary, but the page you’re trying to reach can’t be found. Perhaps it was just a bad <span>link</span> dream?</p>
-    <p>Please take me <a href="{{route('/')}}">HOME</a> </p>
+    <p>Please take me <a href="{{route('dashboard')}}">HOME</a> </p>
 </div>
 <script src="{{ asset('js/404.js') }}"></script>
 </body>
