@@ -121,7 +121,7 @@ class UserController extends Controller
 
     }
 
-    public function check(Request $request)
+    public function check()
     {
 
             return response()->json([
