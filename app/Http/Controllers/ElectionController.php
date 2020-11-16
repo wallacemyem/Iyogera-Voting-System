@@ -59,6 +59,7 @@ class ElectionController extends Controller
         $book_issue->start   = $start;
         $book_issue->end     = $end;
         $book_issue->status  = 1;
+        $book_issue->school_id  = school_id();
 
         if($book_issue->save()){
 
