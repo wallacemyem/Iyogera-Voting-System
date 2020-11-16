@@ -13,7 +13,7 @@
 Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('user', 'UserController');
-    Route::post('get_matric', 'UserController@check');
+    Route::get('get_matric', 'UserController@check');
 
     Route::resource('election', 'ElectionController');
 
