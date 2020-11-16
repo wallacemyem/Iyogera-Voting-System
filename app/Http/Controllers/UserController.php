@@ -120,4 +120,19 @@ class UserController extends Controller
     {
 
     }
+
+    public function check(Request $request)
+    {
+        $student = $request->matric;
+
+        $check = Student::first($student);
+
+        if( exist($check))
+        {
+            return response()->json([
+            'status' => 'success',
+            'message'=> $student
+        ]);
+        }
+    }
 }
