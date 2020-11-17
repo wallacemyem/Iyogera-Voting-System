@@ -124,10 +124,12 @@ class UserController extends Controller
             $find = Student::where('code', $id)->first();
 
             if ( $find === null) {
-                flash(translate('matriculation_number_not_found'))->success();
+
+                flash(translate('matriculation_number_not_found'))->error();
                 return redirect()->back();
+
             }else{
-                return view('vote.backend.change');
+                return view('vote.backend.change', compact('id'));
             }
 
     }
