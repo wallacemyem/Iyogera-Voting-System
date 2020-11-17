@@ -10,7 +10,7 @@
 |
 */
 
-Route::get('get_matric', 'UserController@check');
+Route::post('get_matric', 'UserController@check');
 
 Route::group(['middleware' => ['auth']], function () {
 

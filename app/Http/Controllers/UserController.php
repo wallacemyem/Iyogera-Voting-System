@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-     
+
     public function index(){
 
     	$title = translate('users');
@@ -120,10 +120,12 @@ class UserController extends Controller
 
     public function check(Request $request)
     {
+            $id = $request->matric;
+            $find = Student::first($id);
 
             return response()->json([
             'status' => 'success',
-            'message'=> 'halo, hello, helo'
+            'message'=> $find->code
         ]);
 
     }
