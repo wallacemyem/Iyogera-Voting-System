@@ -126,7 +126,7 @@ class UserController extends Controller
             if ( $more == $id) {
                 return response()->json([
                     'status' => 'success',
-                    'message' => $find->code
+                    'message' => 'Welcome'
                 ]);
             }else{
                 return response()->json([
