@@ -11,7 +11,7 @@
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
 
-                           {{ $id->code }} {{ __(' Add Security Question') }}
+                           {{ $find->code }} {{ __(' Add Security Question') }}
 
                             <br>
 
