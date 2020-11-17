@@ -24,7 +24,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="em em-email" aria-role="presentation" aria-label="ENVELOPE"></i></span>
                                     </div>
-                                    <input class="form-control" placeholder="{{ __('Matric Number') }}" type="text" name="matric"  value="" required autofocus>
+                                    <input class="form-control" placeholder="{{ __('Matriculation Number') }}" type="text" name="matric"  value="" required autofocus>
                                 </div>
                             </div>
                             <div class="text-center">
