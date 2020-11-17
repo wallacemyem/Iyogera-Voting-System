@@ -121,7 +121,7 @@ class UserController extends Controller
     public function check(Request $request)
     {
             $id = $request->matric;
-            $find = Student::first($id);
+            $find = Student::where('id', $id)->first();
 
             return response()->json([
             'status' => 'success',
