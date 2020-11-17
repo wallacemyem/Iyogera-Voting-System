@@ -14,7 +14,7 @@ class AddonController extends Controller
 
     public function onstart(){
 
-        return view('backend.'.Auth::user()->role.'.user.create');
+        return view('vote.backend.vue');
     }
 
     public function vote(Request $request)
