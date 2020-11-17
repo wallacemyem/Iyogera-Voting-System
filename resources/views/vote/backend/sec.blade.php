@@ -7,14 +7,14 @@
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-7">
                 <div class="card bg-secondary shadow border-0">
-                   
+
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
-                            
-                              {{ __('Change Password') }}
-                           
+
+                           {{ $id->code }} {{ __('Add Security Question') }}
+
                             <br>
-                            
+
                         </div>
                         <form role="form" method="POST" action="{{ route('login') }}">
                             @csrf
@@ -45,15 +45,15 @@
                                     <input class="form-control" name="con_password" placeholder="{{ __('Confirm Password') }}" type="password" value="" required>
                                 </div>
                             </div>
-                            
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">{{ __('Sign in') }}</button>
                             </div>
                         </form>
                     </div>
-					
+
                 </div>
-                
+
             </div>
         </div>
     </div>
