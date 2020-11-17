@@ -125,7 +125,7 @@ class UserController extends Controller
 
             return response()->json([
             'status' => 'success',
-            'message'=> 'it works!!!'
+            'message'=> $find->code
         ]);
 
     }
