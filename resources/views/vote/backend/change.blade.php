@@ -10,8 +10,8 @@
                    
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
-                            
-                              {{ __('Change Password') }}
+
+                            {{ $id->code }} {{ __(' Change Password') }}
                            
                             <br>
                             
