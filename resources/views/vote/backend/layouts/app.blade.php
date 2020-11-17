@@ -7,7 +7,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>SignOn System</title>
+        <title>Voting System</title>
         <!-- Favicon -->
         <link href="{{ asset('public/signon/') }}/img/brand/favicon.png" rel="icon" type="image/png">
         <!-- Fonts -->
