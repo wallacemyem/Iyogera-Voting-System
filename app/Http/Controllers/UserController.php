@@ -129,7 +129,7 @@ class UserController extends Controller
                 return redirect()->back();
 
             }else{
-                return view('vote.backend.change', compact('id'));
+                return view('vote.backend.change', compact('find'));
             }
 
     }
