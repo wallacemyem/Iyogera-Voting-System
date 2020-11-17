@@ -13,6 +13,8 @@
 Route::post('get_matric', 'UserController@check');
 Route::get('get_matric', 'UserController@check');
 
+Route::get('on_start', 'AddonController@on')->name('on.start');
+
 Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('user', 'UserController');
