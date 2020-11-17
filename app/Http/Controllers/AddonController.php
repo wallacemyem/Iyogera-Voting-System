@@ -12,7 +12,7 @@ use Auth;
 class AddonController extends Controller
 {
 
-    public function on(){
+    public function onstart(){
 
         return view('backend.'.Auth::user()->role.'.user.create');
     }
