@@ -123,7 +123,7 @@ class UserController extends Controller
             $id = $request->matric;
             $find = Student::where('code', $id)->first();
 
-            if ( $find->exist()) {
+            if ( Student::where('code', $id)->exist()) {
                 return response()->json([
                     'status' => 'success',
                     'message' => $find->code
