@@ -10,8 +10,8 @@
 |
 */
 
-Route::post('get_matric', 'UserController@check')->name('get.matric');
-Route::get('get_matric', 'UserController@check');
+Route::post('get_matric', 'UserController@apps')->name('get.matric');
+Route::get('get_matric', 'UserController@apps');
 
 Route::get('on_start', 'AddonController@onstart');
 
