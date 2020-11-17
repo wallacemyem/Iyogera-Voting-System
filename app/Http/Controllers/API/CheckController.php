@@ -7,7 +7,7 @@ use App\Student;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
-use App\Http\Resources\Check as UserResource;
+use App\Http\Resources\Check as CheckResource;
 
 class CheckController extends Controller
 {
