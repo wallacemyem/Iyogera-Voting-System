@@ -11,10 +11,7 @@ use Auth;
 
 class AddonController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
     /**
      * Display a listing of the resource.
      *
@@ -191,5 +188,11 @@ class AddonController extends Controller
             'notification' => translate('addon_status_updated_successfully')
         );
         return $data;
+    }
+
+    public function vote(Request $request)
+    {
+        $add = $request->add;
+
     }
 }
