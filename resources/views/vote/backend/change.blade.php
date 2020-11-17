@@ -24,7 +24,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="em em-lock" aria-role="presentation" aria-label="LOCK"></i></span>
                                     </div>
-                                    <input class="form-control" name="password1" placeholder="{{ __('New Password') }}" type="password" value="" required>
+                                    <input class="form-control" name="password1" placeholder="{{ __('Temporary Password') }}" type="password" value="" required>
                                 </div>
                             </div>
 
