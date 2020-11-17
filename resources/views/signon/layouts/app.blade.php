@@ -7,7 +7,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>SignOn System</title>
+        <title>Voting System</title>
         <!-- Favicon -->
         <link href="{{ asset('public/signon/') }}/img/brand/favicon.png" rel="icon" type="image/png">
         <!-- Fonts -->
@@ -43,5 +43,18 @@
         
         <!-- Argon JS -->
         <script src="{{ asset('public/signon/') }}/js/argon.js?v=1.0.0"></script>
+        @foreach (session('flash_notification', collect())->toArray() as $message)
+            @if($message['level'] == 'success')
+                <script type="text/javascript">
+                    var notyf = new Notyf();
+                    notyf.success('{{ $message['message'] }}');
+                </script>
+            @else
+                <script type="text/javascript">
+                    var notyf = new Notyf();
+                    notyf.error('{{ $message['message'] }}');
+                </script>
+            @endif
+        @endforeach
     </body>
 </html>
