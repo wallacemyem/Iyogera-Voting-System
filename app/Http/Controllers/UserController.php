@@ -124,16 +124,30 @@ class UserController extends Controller
             $find = Student::where('code', $id)->first();
 
             if ( $find === null) {
-                return response()->json([
-                    'status' => 'error',
-                    'message' => 'Matric Number not found'
-                ]);
+                flash(translate('matriculation_number_not_found'))->success();
+                return redirect()->back();
             }else{
-                return response()->json([
-                    'status' => 'success',
-                    'message' => $find->code
-                ]);
+                return view('vote.backend.change');
             }
+
+    }
+
+    public function apps(Request $request)
+    {
+        $id = $request->matric;
+        $find = Student::where('code', $id)->first();
+
+        if ( $find === null) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Matric Number not found'
+            ]);
+        }else{
+            return response()->json([
+                'status' => 'success',
+                'message' => $find->code
+            ]);
+        }
 
     }
 }
