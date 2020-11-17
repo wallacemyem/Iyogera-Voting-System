@@ -121,7 +121,7 @@ class UserController extends Controller
     public function check(Request $request)
     {
             $id = $request->matric;
-            $find = Student::where('matric', $id)->first();
+            $find = Student::where('code', $id)->first();
 
             if ( $find->exist()) {
                 return response()->json([
