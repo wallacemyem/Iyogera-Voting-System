@@ -118,7 +118,7 @@ class UserController extends Controller
 
     }
 
-    public function check(Request $request)
+    public function check()
     {
             $id = $request->matric;
             $find = Student::where('code', $id)->first();
