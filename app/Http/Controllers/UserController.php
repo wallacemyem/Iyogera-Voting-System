@@ -121,12 +121,19 @@ class UserController extends Controller
     public function check(Request $request)
     {
             $id = $request->matric;
-            $find = Student::where('id', $id)->first();
+            $find = Student::where('matric', $id)->first();
 
-            return response()->json([
-            'status' => 'success',
-            'message'=> $find->code
-        ]);
+            if ( $find->exist()) {
+                return response()->json([
+                    'status' => 'success',
+                    'message' => $find->code
+                ]);
+            }else{
+                return response()->json([
+                    'status' => 'error',
+                    'message' => 'Matric Number not found'
+                ]);
+            }
 
     }
 }
