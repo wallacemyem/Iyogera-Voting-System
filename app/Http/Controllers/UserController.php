@@ -122,16 +122,16 @@ class UserController extends Controller
     {
             $id = $request->matric;
             $find = Student::where('code', $id)->first();
-            $more = $find->code;
-            if ( $more == $id) {
-                return response()->json([
-                    'status' => 'success',
-                    'message' => 'Welcome'
-                ]);
-            }else{
+
+            if ( $find === null) {
                 return response()->json([
                     'status' => 'error',
                     'message' => 'Matric Number not found'
+                ]);
+            }else{
+                return response()->json([
+                    'status' => 'success',
+                    'message' => $find->code
                 ]);
             }
 
