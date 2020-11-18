@@ -20,15 +20,15 @@
                             @csrf
 
                             <div class="dropdown">
-                                <div class="input-group input-group-alternative">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i>                            Regular
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                                    <select class="form-control" name="q1" id="q1">
+                                        <option value="all">{{ __('Select a Question') }}</option>
+
+                                            <option value="1">What primary school did you attend?</option>
+                                            <option value="2">What is the middle name of your oldest sibling?</option>
+                                             <option value="3">In what town or city did your parents meet?</option>
+
+                                    </select>
                                 </div>
                             </div>
 
@@ -42,13 +42,13 @@
                             </div>
 
                             <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i> Regular
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                                    <select class="form-control" name="q2" id="q2">
+                                        <option value="all">{{ __('Select a Question') }}</option>
+
+                                        <option value="{{ $exam->id }}">{{ $exam->name }}</option>
+
+                                    </select>
                                 </div>
                             </div>
 
