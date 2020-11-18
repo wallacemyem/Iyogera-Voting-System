@@ -140,10 +140,10 @@ class UserController extends Controller
         $find = Student::where('code', $id)->first();
 
         if ( $find === null) {
-            return response()->json([
+            return response()->json([[
                 'status' => 'error',
                 'message' => 'Matric Number not found'
-            ]);
+            ]]);
         }else{
             return response()->json([
                 'status' => 'success',
