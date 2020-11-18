@@ -27,6 +27,7 @@
                                     <input class="form-control" placeholder="{{ __('Matriculation Number') }}" type="text" name="matric"  value="" required autofocus>
                                 </div>
                             </div>
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">{{ __('Start') }}</button>
                             </div>

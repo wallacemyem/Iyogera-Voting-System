@@ -118,10 +118,10 @@ class UserController extends Controller
         return view('vote.backend.change');
     }
 
-    public function password(Request $request)
+    public function password(Request $request, $find)
     {
 
-        $matric = $request->matric;
+        $matric = $find->code;
 
 
         $old_pass = $request->password1;
