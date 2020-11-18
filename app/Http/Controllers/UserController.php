@@ -144,7 +144,7 @@ class UserController extends Controller
 
         }else{
             flash(translate('matriculation_number_not_found'))->error();
-            return view('vote.backend.change', compact('find'));
+            return view('vote.backend.change');
         }
     }
 
