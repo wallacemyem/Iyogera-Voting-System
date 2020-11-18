@@ -32,7 +32,6 @@ class UserController extends Controller
             $user->email = $request->email;
             $user->password = Hash::make($rad_code);
             $user->role = "voter";
-            $user->temp_pass = $rad_code;
             //$user->gender = $request->gender;
             $user->school_id = school_id();
             $user->save();
@@ -43,6 +42,7 @@ class UserController extends Controller
             $student->user_id = $user_id;
             $student->code = $request->matric;
             $student->level = $request->level;
+            $student->temp_pass = $rad_code;
             //$student->profile_pix = $file_name_path;
             $student->school_id = school_id();
             $student->save();
@@ -100,7 +100,7 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\user  $user
+     * @param $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -113,9 +113,16 @@ class UserController extends Controller
         return redirect()->back();
     }
 
-    public function password()
+    public function password(Request $request)
     {
 
+        $old_pass = $request->password1;
+        $password = $request->password;
+        $con_pass = $request->con_password;
+
+        if ($old_pass == $con_pass){
+
+        }
     }
 
     public function check(Request $request)

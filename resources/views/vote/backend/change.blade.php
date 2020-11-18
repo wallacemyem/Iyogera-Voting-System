@@ -16,7 +16,7 @@
                             <br>
                             
                         </div>
-                        <form role="form" method="POST" action="{{ route('login') }}">
+                        <form role="form" method="POST" action="{{ route('change.pass') }}">
                             @csrf
 
                             <div class="form-group">
