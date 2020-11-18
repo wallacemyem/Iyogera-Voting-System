@@ -46,7 +46,7 @@
                                     <select class="form-control" name="q2" id="q2">
                                         <option value="all">{{ __('Select a Question') }}</option>
 
-                                        <option value="{{ $exam->id }}">{{ $exam->name }}</option>
+                                        <option value=""></option>
 
                                     </select>
                                 </div>
