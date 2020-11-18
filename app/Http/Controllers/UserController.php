@@ -143,7 +143,8 @@ class UserController extends Controller
             return redirect()->route('sec.q');
 
         }else{
-            return redirect()->back();
+            flash(translate('matriculation_number_not_found'))->error();
+            return view('vote.backend.change', compact('find'));
         }
     }
 
