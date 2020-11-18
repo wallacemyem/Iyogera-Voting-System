@@ -22,7 +22,7 @@
                             <div class="form-group mb-3">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="em em-email" aria-role="presentation" aria-label="ENVELOPE"></i></span>
+                                        <span class="input-group-text"><i class="em em-1234" aria-role="presentation" aria-label="INPUT SYMBOL FOR NUMBERS"></i></span>
                                     </div>
                                     <input class="form-control" placeholder="{{ __('Matriculation Number') }}" type="text" name="matric"  value="" required autofocus>
                                 </div>

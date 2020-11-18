@@ -121,12 +121,27 @@ class UserController extends Controller
     public function password(Request $request)
     {
 
+        $matric = $request->matric;
+        $student = Student::where('code', $matric)->first();
+        $id = $student->user_id;
+        $user_id = User::where('id', $id)->first();
+
         $old_pass = $request->password1;
         $password = $request->password;
         $con_pass = $request->con_password;
 
         if ($old_pass == $con_pass){
 
+            $user_id = User::find($user_id->id);
+            $user_id->password = Hash::make($con_pass);
+            $user_id->temp_pass = $con_pass;
+            $user_id->temp = 0;
+            $user_id->save();
+
+            return view('vote.backend.sec', compact('matric'));
+
+        }else{
+            return redirect()->back();
         }
     }
 
