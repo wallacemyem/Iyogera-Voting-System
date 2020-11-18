@@ -128,7 +128,7 @@ class UserController extends Controller
         $password = $request->password;
         $con_pass = $request->con_password;
 
-        if ($old_pass == $con_pass){
+        if ($password === $con_pass){
 
             $student = Student::where('code', $matric)->first();
             $id = $student->user_id;
