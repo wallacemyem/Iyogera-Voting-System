@@ -115,7 +115,7 @@ class UserController extends Controller
 
     public function passwordchange(){
 
-        return view('vote.backend.change');
+        return view('vote.backend.sec');
     }
 
     public function password(Request $request)
@@ -140,7 +140,7 @@ class UserController extends Controller
             $user_id->temp = 0;
             $user_id->save();
 
-            return view('vote.backend.sec', compact('matric'));
+            return redirect()->route('sec.q');
 
         }else{
             return redirect()->back();

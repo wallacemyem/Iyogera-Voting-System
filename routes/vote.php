@@ -12,7 +12,7 @@
 
 Route::get('get_students', 'API\CheckController@index');
 
-Route::get('change_password', 'UserController@changepassword');
+Route::get('change_question', 'UserController@changepassword')->name('sec.q');
 Route::post('change_password2', 'UserController@password')->name('change.pass');
 
 Route::post('get_matric', 'UserController@check')->name('get.matric');
