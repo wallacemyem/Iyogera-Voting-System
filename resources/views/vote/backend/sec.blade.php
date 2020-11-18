@@ -26,7 +26,8 @@
 
                                             <option value="1">What primary school did you attend?</option>
                                             <option value="2">What is the middle name of your oldest sibling?</option>
-                                             <option value="3">In what town or city did your parents meet?</option>
+                                            <option value="3">In what town or city did your parents meet?</option>
+                                            <option value="4">What is your favorite color?</option>
 
                                     </select>
                                 </div>
@@ -46,7 +47,11 @@
                                     <select class="form-control" name="q2" id="q2">
                                         <option value="all">{{ __('Select a Question') }}</option>
 
-                                        <option value="{{ $exam->id }}">{{ $exam->name }}</option>
+                                        <option value="5">What is your pet's name?</option>
+                                        <option value="6">In what county where you born?</option>
+                                        <option value="7">What is your favorite sport?</option>
+                                        <option value="8">What is your favorite movie?</option>
+                                        <option value="9">What is your favorite animal?</option>
 
                                     </select>
                                 </div>
