@@ -113,6 +113,11 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    public function passwordchange(){
+
+        return view('vote.backend.change');
+    }
+
     public function password(Request $request)
     {
 
