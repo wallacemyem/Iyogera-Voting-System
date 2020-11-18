@@ -45,7 +45,9 @@
                                     <input class="form-control" name="con_password" placeholder="{{ __('Confirm Password') }}" type="password" value="" required>
                                 </div>
                             </div>
-                            
+
+                            <input name="matric" type="hidden" value="{{ $find->code }}" >
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">{{ __('Change') }}</button>
                             </div>
