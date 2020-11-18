@@ -122,15 +122,17 @@ class UserController extends Controller
     {
 
         $matric = $request->matric;
-        $student = Student::where('code', $matric)->first();
-        $id = $student->user_id;
-        $user_id = User::where('id', $id)->first();
+
 
         $old_pass = $request->password1;
         $password = $request->password;
         $con_pass = $request->con_password;
 
         if ($old_pass == $con_pass){
+
+            $student = Student::where('code', $matric)->first();
+            $id = $student->user_id;
+            $user_id = User::where('id', $id)->first();
 
             $user_id = User::find($user_id->id);
             $user_id->password = Hash::make($con_pass);
