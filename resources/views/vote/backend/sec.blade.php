@@ -19,12 +19,14 @@
                         <form role="form" method="POST" action="{{ route('login') }}">
                             @csrf
 
-                            <div class="form-group">
-                                <div class="input-group input-group-alternative">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="em em-lock" aria-role="presentation" aria-label="LOCK"></i></span>
-                                    </div>
-                                    <input class="form-control" name="password1" placeholder="{{ __('Temporary Password') }}" type="password" value="" required>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i> Regular
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
                             </div>
 
@@ -34,6 +36,17 @@
                                         <span class="input-group-text"><i class="em em-lock" aria-role="presentation" aria-label="LOCK"></i></span>
                                     </div>
                                     <input class="form-control" name="password" placeholder="{{ __('New Password') }}" type="password" value="" required>
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="em em-question" aria-role="presentation" aria-label="BLACK QUESTION MARK ORNAMENT"></i> Regular
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
                             </div>
 
