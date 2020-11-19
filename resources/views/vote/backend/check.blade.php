@@ -24,7 +24,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"></span>
                                     </div>
-                                    <input class="form-control" name="q1" placeholder="{{ $id->sec->name }}" type="text" value="" disabled>
+                                    <input class="form-control" name="q1" placeholder="{{ $user->sec->name }}" type="text" value="" disabled>
                                 </div>
                             </div>
 
@@ -42,7 +42,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"></span>
                                     </div>
-                                    <input class="form-control" name="q2" placeholder="{{ $id->seq->name }}" type="text" value="" disabled>
+                                    <input class="form-control" name="q2" placeholder="{{ $user->seq->name }}" type="text" value="" disabled>
                                 </div>
                             </div>
 
