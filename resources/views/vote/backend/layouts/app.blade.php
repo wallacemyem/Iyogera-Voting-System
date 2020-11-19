@@ -12,6 +12,9 @@
         <link href="{{ asset('public/signon/') }}/img/brand/favicon.png" rel="icon" type="image/png">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+        <link href="{{ asset('backend/css/notyf.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- Icons -->
         <link href="{{ asset('public/signon/') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
         <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">

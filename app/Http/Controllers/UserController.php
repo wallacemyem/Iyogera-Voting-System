@@ -240,7 +240,7 @@ class UserController extends Controller
         if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
             return redirect()->route('elect.ion');
         }else{
-            return view('vote.backend.check');
+            return view('vote.backend.check', compact('user', 'id'));
         }
     }
 }
