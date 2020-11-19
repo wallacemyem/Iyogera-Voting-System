@@ -6,6 +6,7 @@ use App\Enroll;
 use App\Student;
 use App\User;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 use Auth;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +30,7 @@ class UserController extends Controller
             $user->first_name = $request->first_name;
             $user->other_name = $request->other_name;
             $user->middle_name = $request->middle_name;
-            $user->email = $request->email;
+            $user->email = $request->first_name.'.'.$request->other_name.'@iyogera.com';
             $user->password = Hash::make($rad_code);
             $user->role = "voter";
             //$user->gender = $request->gender;
@@ -122,7 +123,7 @@ class UserController extends Controller
     {
 
         $find = $request->matric;
-
+        $time = Carbon::now();
 
         $old_pass = $request->password1;
         $password = $request->password;
@@ -147,7 +148,7 @@ class UserController extends Controller
                     $user_id->temp = 0;
                     $user_id->save();
 
-                    return redirect()->route('sec.q');
+                    return view('vote.backend.sec', compact('time','id'));
 
                 } else {
                     flash(translate('matriculation_number_not_found'))->error();
@@ -190,6 +191,13 @@ class UserController extends Controller
                 'message' => $find->code
             ]);
         }
+
+    }
+
+    public function security(){
+
+            $time = Carbon::now();
+
 
     }
 }

@@ -46,10 +46,10 @@ class ElectionController extends Controller
     public function store(Request $request)
     {
         $start_format = Carbon::createFromIsoFormat('L', $request->start_date, null, 'en');
-        $start_date = $start_format->isoFormat('D-M-YYYY');
+        $start_date = $start_format->isoFormat('YYYY-M-D');
 
         $end_format = Carbon::createFromIsoFormat('L', $request->end_date, null, 'en');
-        $end_date = $end_format->isoFormat('D-M-YYYY');
+        $end_date = $end_format->isoFormat('YYYY-M-D');
 
         $start = $start_date.' '.$request->start_time.':00';
         $end = $end_date.' '.$request->end_time.':00';
