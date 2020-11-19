@@ -128,7 +128,7 @@ class UserController extends Controller
         $password = $request->password;
         $con_pass = $request->con_password;
 
-        $check = Student::where('code', $matric)->first;
+        $check = Student::where('code', $matric)->first();
         dd($check);
 
         if (ee){
