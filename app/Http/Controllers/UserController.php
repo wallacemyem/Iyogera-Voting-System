@@ -227,7 +227,19 @@ class UserController extends Controller
         return view('vote.backend.elections');
     }
 
-    public function checksec(){
+    public function checksec(Request $request){
 
+        $a1 = $request->a1;
+        $a2 = $request->a2;
+
+        $id = $request->id;
+
+        $user = User::where('id', $id)->first();
+
+        if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
+            return redirect()->route('elect.ion');
+        }else{
+            return view('vote.backend.check');
+        }
     }
 }
