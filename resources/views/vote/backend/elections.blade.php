@@ -63,15 +63,15 @@
                                                 $time = \Carbon\Carbon::now();
                                             @endphp
 
-                                            @if($time < $teacher->election->start)
+                                            @if(\Carbon\Carbon::now() < $teacher->election->start)
                                                   <span class="badge badge-dot mr-4">
                                                     <i class="bg-warning"></i> Pending
                                                   </span>
-                                                @elseif($time > $teacher->election->end)
+                                                @elseif(\Carbon\Carbon::now() > $teacher->election->end)
                                                     <span class="badge badge-dot mr-4">
                                                     <i class="bg-success"></i> Completed
                                                     </span>
-                                                @elseif($time >= $teacher->election->start && $time <= $teacher->election->end )
+                                                @elseif(\Carbon\Carbon::now() >= $teacher->election->start && $time <= $teacher->election->end )
                                                     <span class="badge badge-dot mr-4">
                                                     <i class="bg-danger"></i> On-Going
                                                     </span>
