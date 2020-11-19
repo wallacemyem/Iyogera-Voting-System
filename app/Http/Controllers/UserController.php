@@ -163,10 +163,10 @@ class UserController extends Controller
     {
             $find = $request->matric;
             $student = Student::where('code', $find)->first();
-            dd($student);
+            //dd($student);
             $id = $student->user_id;
 
-            $user = User::where('id', $student->user_id)->first();
+            $user = User::where('id', $id)->first();
 
             if ( $user->temp == 1) {
 
