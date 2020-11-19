@@ -20,12 +20,6 @@
             </div>
 
             <div class="form-group col-md-12">
-                <label for="email">{{ translate('email') }}</label>
-                <input type="email" class="form-control" id="email" name = "email" required>
-                <small id="" class="form-text text-muted">{{ translate('provide_student_email') }}.</small>
-            </div>
-
-            <div class="form-group col-md-12">
                 <label for="matric">{{ translate('matriculation_number') }}</label>
                 <input type="matric" class="form-control" id="matric" name = "matric" required>
                 <small id="" class="form-text text-muted">{{ translate('matriculation_number') }}.</small>
