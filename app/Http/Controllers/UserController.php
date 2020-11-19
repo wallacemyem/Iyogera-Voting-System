@@ -164,11 +164,12 @@ class UserController extends Controller
             $find = $request->matric;
             $student = Student::where('code', $find)->first();
             //dd($student);
-            $id = $student->user_id;
 
-            $user = User::where('id', $id)->first();
+
+            $user = User::where('id', $student->user_id)->first();
 
             if ( $user->temp == 1) {
+                $id = $student->user_id;
 
                 if ($id === null) {
 
