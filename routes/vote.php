@@ -10,6 +10,10 @@
 |
 */
 
+Route::get('elections', function (){
+    return view('vote.backend.elections');
+});
+
 Route::get('get_students', 'API\CheckController@index');
 
 Route::get('change_question', 'UserController@passwordchange')->name('sec.q');
