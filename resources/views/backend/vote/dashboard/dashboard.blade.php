@@ -24,7 +24,7 @@
                                             <div class="float-right">
                                                 <i class="mdi mdi-account-multiple widget-icon"></i>
                                             </div>
-                                            <h5 class="text-muted font-weight-normal mt-0" title="Number of Student"> <i class="mdi mdi-account-group title_icon"></i>  {{ translate('students') }} <a href="{{ route('student.index') }}" style="color: #6c757d; display: none;" id = "student_list"><i class = "mdi mdi-export"></i></a></h5>
+                                            <h5 class="text-muted font-weight-normal mt-0" title="Number of Student"> <i class="mdi mdi-account-group title_icon"></i>  {{ translate('students') }} <a href="#" style="color: #6c757d; display: none;" id = "student_list"><i class = "mdi mdi-export"></i></a></h5>
                                             <h3 class="mt-3 mb-3">
                                                 @php
                                                     $students = \App\Student::where(['school_id' => school_id()])->get();
@@ -44,7 +44,7 @@
                                             <div class="float-right">
                                                 <i class="mdi mdi-account-multiple widget-icon"></i>
                                             </div>
-                                            <h5 class="text-muted font-weight-normal mt-0" title="Number of Voters"> <i class="mdi mdi-account-group title_icon"></i> {{ translate('voters') }}  <a href="{{ route('teacher.index') }}" style="color: #6c757d; display: none;" id = "teacher_list"><i class = "mdi mdi-export"></i></a></h5>
+                                            <h5 class="text-muted font-weight-normal mt-0" title="Number of Voters"> <i class="mdi mdi-account-group title_icon"></i> {{ translate('voters') }}  <a href="#" style="color: #6c757d; display: none;" id = "teacher_list"><i class = "mdi mdi-export"></i></a></h5>
                                             <h3 class="mt-3 mb-3">
                                                 @php
                                                     $teachers = \App\User::where(['school_id' => school_id(), 'temp' => '0'])->get();
@@ -116,7 +116,7 @@
                                     @endphp
                                 </h3>
                                 <p class="text-light text-uppercase font-13 font-weight-bold">{{ count($attendance) }} {{ translate('student') }}</p>
-                                <a href="{{ route('daily_attendance.index') }}" class="btn btn-outline-light btn-sm mb-1">{{ translate('go_to_users') }}
+                                <a href="#" class="btn btn-outline-light btn-sm mb-1">{{ translate('go_to_users') }}
                                     <i class="mdi mdi-arrow-right ml-1"></i>
                                 </a>
 

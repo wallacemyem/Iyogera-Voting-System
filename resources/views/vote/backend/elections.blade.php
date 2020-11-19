@@ -59,6 +59,10 @@
                                             </div>
                                         </th>
                                         <td>
+                                            @php
+                                                $time = \Carbon\Carbon::now();
+                                            @endphp
+
                                             @if($time < $teacher->election->start)
                                                   <span class="badge badge-dot mr-4">
                                                     <i class="bg-warning"></i> Pending

@@ -68,7 +68,7 @@
                             </div>
 
                             <div>
-                                <input class="form-control" name="id"  value="{{$id}}" >
+                                <input type="hidden" class="form-control" name="id"  value="{{$id}}" >
                             </div>
 
                             <div class="text-center">

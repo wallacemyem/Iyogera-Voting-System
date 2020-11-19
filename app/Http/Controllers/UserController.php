@@ -196,8 +196,6 @@ class UserController extends Controller
 
     public function security(Request $request){
 
-            $time = Carbon::now();
-
             $q1 = $request->a1;
             $q2 = $request->a2;
 
@@ -208,7 +206,11 @@ class UserController extends Controller
             $user->remember_token2 = $q2;
             $user->save();
 
-            return view('vote.backend.elections', compact('time'));
+            return redirect()->route('elect.ion');
+
+    }
+
+    public function checksec(){
 
     }
 }
