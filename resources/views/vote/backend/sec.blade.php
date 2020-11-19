@@ -35,9 +35,9 @@
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text"></i></span>
+                                        <span class="input-group-text"></span>
                                     </div>
-                                    <input class="form-control" name="password" placeholder="{{ __('New Password') }}" type="password" value="" required>
+                                    <input class="form-control" name="password" placeholder="{{ __('Your Answer') }}" type="text" value="" required>
                                 </div>
                             </div>
 
@@ -57,7 +57,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"></span>
                                     </div>
-                                    <input class="form-control" name="con_password" placeholder="{{ __('Confirm Password') }}" type="password" value="" required>
+                                    <input class="form-control" name="con_password" placeholder="{{ __('Your Answer') }}" type="text" value="" required>
                                 </div>
                             </div>
 
