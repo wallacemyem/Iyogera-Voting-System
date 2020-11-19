@@ -162,15 +162,23 @@ class UserController extends Controller
     public function check(Request $request)
     {
             $find = $request->matric;
-            $id = Student::where('code', $find)->first();
+            $student = Student::where('code', $find)->first();
+            $id = $student->user_id;
 
-            if ( $id === null) {
+            $user = User::where('id', $student->user_id)->first();
 
-                flash(translate('matriculation_number_not_found'))->error();
-                return redirect()->back();
+            if ( $user->temp == 1) {
 
+                if ($id === null) {
+
+                    flash(translate('matriculation_number_not_found'))->error();
+                    return redirect()->back();
+
+                } else {
+                    return view('vote.backend.change', compact('find'));
+                }
             }else{
-                return view('vote.backend.change', compact('find'));
+                return view('vote.backend.check');
             }
 
     }

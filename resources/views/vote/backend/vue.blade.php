@@ -1,7 +1,7 @@
 @extends('signon.layouts.app', ['class' => 'bg-default'])
 
 @section('content')
-    @include('signon.layouts.headers.guest')
+    @include('vote.backend.layouts.headers.vue')
 
     <div class="container mt--8 pb-5">
         <div class="row justify-content-center">
