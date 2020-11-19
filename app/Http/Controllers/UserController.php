@@ -131,9 +131,9 @@ class UserController extends Controller
         $check = Student::where('code', $matric)->first();
 
         $check2 = User::where('id', $check->user_id)->first();
-        dd($check2);
+        //dd($check2);
 
-        if (ee){
+        if ($check2->temp_pass === $matric){
 
                 if ($password === $con_pass) {
 
