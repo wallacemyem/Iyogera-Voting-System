@@ -53,7 +53,7 @@
                                                     <img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/bootstrap.jpg">
                                                 </a>
                                                 <div class="media-body">
-                                                    <span class="mb-0 text-sm">{{$teacher->name}}</span>
+                                                    <span class="mb-0 text-sm">{{$teacher->name}}</span><br>
                                                     <small>{{$teacher->election->name}}</small>
                                                 </div>
                                             </div>
