@@ -54,6 +54,7 @@
                                                 </a>
                                                 <div class="media-body">
                                                     <span class="mb-0 text-sm">{{$teacher->name}}</span>
+                                                    <small>{{$teacher->election->name}}</small>
                                                 </div>
                                             </div>
                                         </th>
