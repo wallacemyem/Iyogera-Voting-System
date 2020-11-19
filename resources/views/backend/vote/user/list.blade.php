@@ -29,7 +29,7 @@
                     @if( $teacher->user->temp == "1")
                     <td> {{ $teacher->user->temp_pass }} </td>
                     @else
-                        <td>{{ translate('password_set') }}</td>
+                        <td>{{ translate('Password Set') }}</td>
                     @endif
                     <td>
                         <div class="btn-group mb-2">
