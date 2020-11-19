@@ -160,10 +160,10 @@ class UserController extends Controller
 
     public function check(Request $request)
     {
-            $id = $request->matric;
-            $find = Student::where('code', $id)->first();
+            $find = $request->matric;
+            $id = Student::where('code', $find)->first();
 
-            if ( $find === null) {
+            if ( $id === null) {
 
                 flash(translate('matriculation_number_not_found'))->error();
                 return redirect()->back();

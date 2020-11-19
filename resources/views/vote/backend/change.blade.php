@@ -11,7 +11,7 @@
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
 
-                            {{ $find->code }} {{ __(' Change Password') }}
+                            {{ $find }} {{ __(' Change Password') }}
                            
                             <br>
                             
