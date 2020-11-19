@@ -46,7 +46,7 @@
                                 </div>
                             </div>
 
-                            <input name="matric" type="hidden" value="{{ $find->code }}" >
+                            <input name="matric" type="hidden" value="{{ $find }}" >
 
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary my-4">{{ __('Change') }}</button>
