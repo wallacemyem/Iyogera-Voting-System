@@ -19,7 +19,7 @@
                         <form role="form" method="POST" action="{{ route('login') }}">
                             @csrf
 
-
+                            <div class="dropdown">
                                 <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
                                     <select class="form-control" name="q1" id="q1">
                                         <option value="all">{{ __('Select a Question') }}</option>
@@ -30,16 +30,18 @@
 
                                     </select>
                                 </div>
+                            </div>
 
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
-
+                                        <span class="input-group-text"></i></span>
                                     </div>
                                     <input class="form-control" name="password" placeholder="{{ __('New Password') }}" type="password" value="" required>
                                 </div>
                             </div>
 
+                            <div class="dropdown">
                                 <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
                                     <select class="form-control" name="q2" id="q2">
                                         <option value="all">{{ __('Select a Question') }}</option>
@@ -48,11 +50,12 @@
 
                                     </select>
                                 </div>
+                            </div>
 
                             <div class="form-group">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
-                                        
+                                        <span class="input-group-text"></span>
                                     </div>
                                     <input class="form-control" name="con_password" placeholder="{{ __('Confirm Password') }}" type="password" value="" required>
                                 </div>
