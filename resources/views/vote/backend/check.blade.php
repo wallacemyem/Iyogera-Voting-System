@@ -16,7 +16,7 @@
                             <br>
 
                         </div>
-                        <form role="form" method="POST" action="{{ route('sec.q') }}">
+                        <form role="form" method="POST" action="{{ route('sec.a') }}">
                             @csrf
 
                             <div class="form-group">

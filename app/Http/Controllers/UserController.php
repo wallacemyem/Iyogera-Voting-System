@@ -163,6 +163,7 @@ class UserController extends Controller
     {
             $find = $request->matric;
             $student = Student::where('code', $find)->first();
+            
             $id = $student->user_id;
 
             $user = User::where('id', $student->user_id)->first();
