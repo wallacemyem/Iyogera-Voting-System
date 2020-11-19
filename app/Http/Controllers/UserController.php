@@ -121,23 +121,23 @@ class UserController extends Controller
     public function password(Request $request)
     {
 
-        $matric = $request->matric;
+        $find = $request->matric;
 
 
         $old_pass = $request->password1;
         $password = $request->password;
         $con_pass = $request->con_password;
 
-        $check = Student::where('code', $matric)->first();
+        $check = Student::where('code', $find)->first();
 
         $check2 = User::where('id', $check->user_id)->first();
         //dd($check2);
 
-        if ($check2->temp_pass === $matric){
+        if ($check2->temp_pass === $old_pass){
 
                 if ($password === $con_pass) {
 
-                    $student = Student::where('code', $matric)->first();
+                    $student = Student::where('code', $find)->first();
                     $id = $student->user_id;
                     $user_id = User::where('id', $id)->first();
 
@@ -151,10 +151,10 @@ class UserController extends Controller
 
                 } else {
                     flash(translate('matriculation_number_not_found'))->error();
-                    return view('vote.backend.change');
+                    return view('vote.backend.change', compact('find'));
                 }
         }else{
-            return view('vote.backend.change');
+            return view('vote.backend.change', compact('find'));
         }
     }
 
