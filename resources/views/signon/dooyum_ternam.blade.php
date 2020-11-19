@@ -1,4 +1,4 @@
-@extends('signon.layouts.app', ['class' => 'bg-default'])
+@extends('vote.backend.layouts.app', ['class' => 'bg-default'])
 
 @section('content')
     @include('signon.layouts.headers.guest')
