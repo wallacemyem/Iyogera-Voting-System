@@ -47,15 +47,11 @@
                                     <select class="form-control" name="q2" id="q2">
                                         <option value="all">{{ __('Select a Question') }}</option>
 
-<<<<<<< HEAD
                                         <option value="5">What is your pet's name?</option>
                                         <option value="6">In what county where you born?</option>
                                         <option value="7">What is your favorite sport?</option>
                                         <option value="8">What is your favorite movie?</option>
                                         <option value="9">What is your favorite animal?</option>
-=======
-                                        <option value=""></option>
->>>>>>> b5db707a3100076097dc26fd8736b2e8b7a8b2a8
 
                                     </select>
                                 </div>
