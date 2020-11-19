@@ -55,6 +55,7 @@
                                                 <div class="media-body">
                                                     <span class="mb-0 text-sm">{{$teacher->name}}</span><br>
                                                     <small>{{$teacher->election->name}}</small>
+                                                    <small>{{$teacher->election->electionStart() }}</small>
                                                 </div>
                                             </div>
                                         </th>
