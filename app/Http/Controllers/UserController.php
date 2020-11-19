@@ -128,23 +128,29 @@ class UserController extends Controller
         $password = $request->password;
         $con_pass = $request->con_password;
 
-        if ($password === $con_pass){
+        $check = Student::where('code', $matric)->first;
+        dd($check);
 
-            $student = Student::where('code', $matric)->first();
-            $id = $student->user_id;
-            $user_id = User::where('id', $id)->first();
+        if (ee){
 
-            $user_id = User::find($user_id->id);
-            $user_id->password = Hash::make($con_pass);
-            $user_id->temp_pass = $con_pass;
-            $user_id->temp = 0;
-            $user_id->save();
+                if ($password === $con_pass) {
 
-            return redirect()->route('sec.q');
+                    $student = Student::where('code', $matric)->first();
+                    $id = $student->user_id;
+                    $user_id = User::where('id', $id)->first();
 
-        }else{
-            flash(translate('matriculation_number_not_found'))->error();
-            return view('vote.backend.change');
+                    $user_id = User::find($user_id->id);
+                    $user_id->password = Hash::make($con_pass);
+                    $user_id->temp_pass = $con_pass;
+                    $user_id->temp = 0;
+                    $user_id->save();
+
+                    return redirect()->route('sec.q');
+
+                } else {
+                    flash(translate('matriculation_number_not_found'))->error();
+                    return view('vote.backend.change');
+                }
         }
     }
 
