@@ -179,7 +179,7 @@ class UserController extends Controller
                     return view('vote.backend.change', compact('find', 'user'));
                 }
             }else{
-                return view('vote.backend.check', compact('id', 'user'));
+                return view('vote.backend.check');
             }
 
     }
