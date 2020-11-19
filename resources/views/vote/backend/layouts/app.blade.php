@@ -20,12 +20,7 @@
         <link type="text/css" href="{{ asset('public/signon/') }}/css/argon.css?v=1.0.0" rel="stylesheet">
     </head>
     <body class="{{ $class ?? '' }}">
-        @auth()
-            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-            @include('signon.layouts.navbars.sidebar')
-        @endauth
+    
         
         <div class="main-content">
             @include('signon.layouts.navbars.navbar')
