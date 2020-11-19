@@ -59,9 +59,19 @@
                                             </div>
                                         </th>
                                         <td>
-                                          <span class="badge badge-dot mr-4">
-                                            <i class="bg-warning"></i> pending
-                                          </span>
+                                            @if($time < $teacher->election->start)
+                                                  <span class="badge badge-dot mr-4">
+                                                    <i class="bg-warning"></i> Pending
+                                                  </span>
+                                                @elseif($time > $teacher->election->end)
+                                                    <span class="badge badge-dot mr-4">
+                                                    <i class="bg-success"></i> Completed
+                                                    </span>
+                                                @elseif($time >= $teacher->election->start && $time <= $teacher->election->end )
+                                                    <span class="badge badge-dot mr-4">
+                                                    <i class="bg-danger"></i> On-Going
+                                                    </span>
+                                            @endif
                                         </td>
 
                             </tr>

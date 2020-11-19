@@ -16,7 +16,7 @@
                             <br>
 
                         </div>
-                        <form role="form" method="POST" action="{{ route('') }}">
+                        <form role="form" method="POST" action="{{ route('sec.q') }}">
                             @csrf
 
                             <div class="dropdown">
@@ -38,7 +38,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"></span>
                                     </div>
-                                    <input class="form-control" name="password" placeholder="{{ __('Your Answer') }}" type="text" value="" required>
+                                    <input class="form-control" name="a1" placeholder="{{ __('Your Answer') }}" type="text" value="" required>
                                 </div>
                             </div>
 
@@ -63,8 +63,12 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"></span>
                                     </div>
-                                    <input class="form-control" name="con_password" placeholder="{{ __('Your Answer') }}" type="text" value="" required>
+                                    <input class="form-control" name="a2" placeholder="{{ __('Your Answer') }}" type="text" value="" required>
                                 </div>
+                            </div>
+
+                            <div>
+                                <input class="form-control" name="id"  value="{{$id}}" >
                             </div>
 
                             <div class="text-center">

@@ -194,10 +194,21 @@ class UserController extends Controller
 
     }
 
-    public function security(){
+    public function security(Request $request){
 
             $time = Carbon::now();
 
+            $q1 = $request->a1;
+            $q2 = $request->a2;
+
+            $id = $request->id;
+
+            $user = User::find($id);
+            $user->remember_token1 = $q1;
+            $user->remember_token2 = $q2;
+            $user->save();
+
+            return view('vote.backend.elections', compact('time'));
 
     }
 }
