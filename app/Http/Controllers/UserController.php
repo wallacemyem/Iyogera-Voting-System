@@ -207,11 +207,16 @@ class UserController extends Controller
             $q1 = $request->a1;
             $q2 = $request->a2;
 
+            $a1 = $request->q1;
+            $a2 = $request->q2;
+
             $id = $request->id;
 
             $user = User::find($id);
             $user->remember_token1 = $q1;
             $user->remember_token2 = $q2;
+            $user->question_1 = $a1;
+            $user->question_2 = $a2;
             $user->save();
 
             return redirect()->route('elect.ion');

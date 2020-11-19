@@ -2,10 +2,11 @@
 
 namespace App;
 
+use App\School;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\School;
+use App\Security;
 
 class User extends Authenticatable
 {
@@ -31,6 +32,14 @@ class User extends Authenticatable
 
     public function school() {
         return $this->belongsTo(School::class);
+    }
+
+    public function sec() {
+        return $this->belongsTo(Security::class, 'question_1');
+    }
+
+    public function seq() {
+        return $this->belongsTo(Security::class, 'question_2');
     }
 
     public function role()

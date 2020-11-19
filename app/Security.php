@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Addon extends Model
+class Security extends Model
 {
-    //
+    protected $table = "sec_q";
 }
