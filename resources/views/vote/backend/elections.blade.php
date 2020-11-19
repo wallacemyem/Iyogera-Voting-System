@@ -55,11 +55,6 @@
                                                 <div class="media-body">
                                                     <span class="mb-0 text-sm">{{$teacher->name}}</span><br>
                                                     <small>{{$teacher->election->name}}</small>
-
-                                                    @php
-
-                                                    @endphp
-                                                    <small>{{$teacher->election->electionStart() }}</small>
                                                 </div>
                                             </div>
                                         </th>

@@ -16,7 +16,7 @@
                             <br>
 
                         </div>
-                        <form role="form" method="POST" action="{{ route('login') }}">
+                        <form role="form" method="POST" action="{{ route('') }}">
                             @csrf
 
                             <div class="dropdown">
