@@ -16,6 +16,7 @@ Route::get('get_students', 'API\CheckController@index');
 
 Route::get('change_question', 'UserController@passwordchange');
 Route::post('change_question', 'UserController@security')->name('sec.q');
+Route::post('check_in', 'UserController@checksec')->name('sec.a');
 
 Route::post('change_password2', 'UserController@password')->name('change.pass');
 
