@@ -210,6 +210,10 @@ class UserController extends Controller
 
     }
 
+    public function elections(){
+        return view('vote.backend.elections');
+    }
+
     public function checksec(){
 
     }
