@@ -180,7 +180,7 @@ class VotingController extends Controller
                     $i->position_id = $nom->position_id;
                     $i->save();
 
-                    flash(translate('congratulations_for_making_a_choice'))
+                    flash(translate('congratulations_for_making_a_choice'));
 
                     return view('vote.backend.elections');
 
