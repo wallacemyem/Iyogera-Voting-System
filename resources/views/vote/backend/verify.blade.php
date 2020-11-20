@@ -56,7 +56,7 @@
                             </div>
 
                             <div>
-                                <input type="hidden" class="form-control" name="id"  value="{{$id}}" >
+                                <input type="hidden" class="form-control" name="id"  value="{{$verify}}" >
                             </div>
 
                             <div class="text-center">
