@@ -10,6 +10,10 @@
 |
 */
 
+Route::get('voting', function (){
+    return view('vote.backend.voting');
+});
+
 Route::get('elections', 'UserController@elections')->name('elect.ion');
 
 Route::get('get_students', 'API\CheckController@index');
