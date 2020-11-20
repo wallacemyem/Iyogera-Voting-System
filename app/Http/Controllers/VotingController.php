@@ -164,14 +164,16 @@ class VotingController extends Controller
 
         $student = Student::where('user_id', $user->id)->first();
 
-        $check = Position::
+        $check = Position::where('student_id', $student->id)->where('nominee_id', $nom->id)->where('election_id', $nom->election_id)->first();
 
-        if ( ) {
+        if ( $check != null ) {
         
 
-        if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
+                if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
 
-            }
+                    
+
+                    }
 
 
         }
