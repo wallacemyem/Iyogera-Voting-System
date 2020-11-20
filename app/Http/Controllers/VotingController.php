@@ -9,6 +9,7 @@ use App\Nominee;
 use App\User;
 use App\Position;
 use App\Student;
+use App\Result;
 
 class VotingController extends Controller
 {
