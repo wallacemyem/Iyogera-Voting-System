@@ -35,7 +35,7 @@
 	
 <ul class="card-list">
 
-	@foreach ( $teachers as $teacher)
+	@foreach ( $nom as $teacher)
 	<li class="card">
 	
 		@if (file_exists('images/nominee/'.$teacher->student_id.'.jpg'))
