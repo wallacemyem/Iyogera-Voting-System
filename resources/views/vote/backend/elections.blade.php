@@ -71,7 +71,7 @@
                                                     <span class="badge badge-dot mr-4">
                                                         <i class="bg-danger"></i> On-Going
                                                         </span>
-                                                @elseif(\Carbon\Carbon::now() > $teacher->election->end)
+                                                @else
                                                     <span class="badge badge-dot mr-4">
                                                     <i class="bg-success"></i> Completed
                                                     </span>
