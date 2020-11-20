@@ -152,13 +152,17 @@ class VotingController extends Controller
 
     public function cast(Request $request)
     {
-        //$id = $request->id;
+        $user = Auth::user()->id;
         $a1 = $request->a1;
         $a2 = $request->a2;
 
         $id = $request->id;
 
-        $user = User::where('id', $id)->first();
+        $nom = Nominee::where('id', $id)->first();
+
+        $nom_id = 
+
+        $student = Student::where('user_id', $user->id)->first();
 
         if ( ) {
         
