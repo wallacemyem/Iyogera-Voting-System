@@ -4,13 +4,20 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Elections</title>
+    <title>Voting</title>
     <meta name="description" content="The HTML5 Herald">
     <meta name="author" content="SitePoint">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('backend/css/notyf.min.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('backend/css/voting.css') }}">
-
+    <script>
+        /* Demo purposes only */
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+    </script>
 </head>
 
 <body>
@@ -49,7 +56,7 @@
 </figure>
 
 <script src="{{ asset('backend/js/notyf.min.js') }}"></script>
-<script src="{{ asset('backend/js/voting.js') }}"></script>
+{{--<script src="{{ asset('backend/js/voting.js') }}"></script>--}}
 @foreach (session('flash_notification', collect())->toArray() as $message)
     @if($message['level'] == 'success')
         <script type="text/javascript">
