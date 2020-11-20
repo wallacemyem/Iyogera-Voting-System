@@ -239,7 +239,7 @@ class UserController extends Controller
 
             flash(translate('security_questions_set_successfully'))->success();
 
-        return view('vote.backend.sec');
+            return view('vote.backend.elections');
 
     }
 
@@ -259,7 +259,7 @@ class UserController extends Controller
         if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
 
             flash(translate('welcome'.' '.$user->first_name.' '.$user->middle_name.' '.$user->other_name))->success();
-            return view('vote.backend.sec');
+            return view('vote.backend.elections');
         }else{
 
             flash(translate('wrong_security_questions_answer'))->error();
