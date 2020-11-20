@@ -6,7 +6,7 @@
 
     <title>Voting</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
+    <meta name="author" content="Votingt">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('backend/css/notyf.min.css') }}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="{{ asset('backend/css/voting.css') }}" type="text/css">
@@ -33,11 +33,12 @@
 @if (count($teachers) > 0)
 
 <ul class="card-list">
+<div><h2> Click on your candidate to vote</h2></div>
+	<br>
+	<br>
 	@foreach ( $teachers as $teacher)
 	<li class="card">
-	<div><h2> Click on your candidate to vote</h2></div>
-	<br>
-	<br>
+	
 		@if (file_exists('images/nominee/'.$teacher->student_id.'.jpg'))
 		<a class="card-image" href="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}" style="background-image: url({{asset('images/nominee/'.$teacher->student_id.'.jpg')}});" data-image-full="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}">
 			<img src="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}" alt="Nominee" />
