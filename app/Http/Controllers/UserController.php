@@ -168,24 +168,31 @@ class UserController extends Controller
             $find = $request->matric;
             $student = Student::where('code', $find)->first();
 
-            $id = $student->user_id;
+            if ( $student != null) {
 
-            $user = User::where('id', $student->user_id)->first();
+                $id = $student->user_id;
 
-            if ( $user->temp == 1) {
+                $user = User::where('id', $student->user_id)->first();
+
+                if ($user->temp == 1) {
 
 
-                if ($id === null) {
+                    if ($id === null) {
 
-                    flash(translate('matriculation_number_not_found'))->error();
-                    return redirect()->back();
+                        flash(translate('matriculation_number_not_found'))->error();
+                        return redirect()->back();
 
+                    } else {
+                        return view('vote.backend.change', compact('find', 'user'));
+                    }
                 } else {
-                    return view('vote.backend.change', compact('find', 'user'));
+                    flash(translate('welcome'))->success();
+                    return view('vote.backend.check', compact('id', 'user'));
                 }
             }else{
-                flash(translate('welcome'))->success();
-                return view('vote.backend.check', compact('id', 'user'));
+
+                flash(translate('matriculation_number_not_found'))->error();
+                return redirect()->back();
             }
 
     }
