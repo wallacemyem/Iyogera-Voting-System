@@ -35,6 +35,9 @@
 <ul class="card-list">
 	@foreach ( $teachers as $teacher)
 	<li class="card">
+	<div><h2> Click on your candidate to vote</h2></div>
+	<br>
+	<br>
 		@if (file_exists('images/nominee/'.$teacher->student_id.'.jpg'))
 		<a class="card-image" href="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}" style="background-image: url({{asset('images/nominee/'.$teacher->student_id.'.jpg')}});" data-image-full="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}">
 			<img src="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}" alt="Nominee" />
