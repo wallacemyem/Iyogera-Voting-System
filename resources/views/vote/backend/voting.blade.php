@@ -31,7 +31,7 @@
     }
 @endphp
 @if (count($teachers) > 0)
-<div style="align:center;"><h2> Click on your candidate to vote</h2></div>
+<div style="text-align:center;"><h2> Click on your candidate to vote</h2></div>
 	
 <ul class="card-list">
 
