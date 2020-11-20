@@ -31,11 +31,11 @@
     }
 @endphp
 @if (count($teachers) > 0)
-
-<ul class="card-list">
 <div><h2> Click on your candidate to vote</h2></div>
 	<br>
 	<br>
+<ul class="card-list">
+
 	@foreach ( $teachers as $teacher)
 	<li class="card">
 	
