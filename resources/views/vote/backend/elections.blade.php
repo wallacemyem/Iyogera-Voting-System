@@ -71,7 +71,7 @@
                                                     <span class="badge badge-dot mr-4">
                                                     <i class="bg-success"></i> Completed
                                                     </span>
-                                                @elseif(\Carbon\Carbon::now() >= $teacher->election->start && $time <= $teacher->election->end )
+                                                @elseif(\Carbon\Carbon::now() > $teacher->election->start )
                                                     <span class="badge badge-dot mr-4">
                                                     <i class="bg-danger"></i> On-Going
                                                     </span>
