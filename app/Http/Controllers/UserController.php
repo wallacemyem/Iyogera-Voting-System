@@ -167,13 +167,13 @@ class UserController extends Controller
     {
             $find = $request->matric;
             $student = Student::where('code', $find)->first();
-            dd($student->level);
 
+            $id = $student->user_id;
 
             $user = User::where('id', $student->user_id)->first();
 
             if ( $user->temp == 1) {
-                $id = $student->user_id;
+
 
                 if ($id === null) {
 
@@ -184,7 +184,7 @@ class UserController extends Controller
                     return view('vote.backend.change', compact('find', 'user'));
                 }
             }else{
-                flash(translate('welcome'))->error();
+                flash(translate('welcome'))->success();
                 return view('vote.backend.check');
             }
 
