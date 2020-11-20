@@ -49,12 +49,14 @@
                             <tr>
                                         <th scope="row">
                                             <div class="media align-items-center">
-                                                <a href="#" class="avatar rounded-circle mr-3">
+                                                <a href="{{ route('vote.p', $teacher->id)}}" class="avatar rounded-circle mr-3">
                                                     <img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/bootstrap.jpg">
                                                 </a>
                                                 <div class="media-body">
+                                                <a href="">
                                                     <span class="mb-0 text-sm">{{$teacher->name}}</span><br>
                                                     <small>{{$teacher->election->name}}</small>
+                                                </a>
                                                 </div>
                                             </div>
                                         </th>

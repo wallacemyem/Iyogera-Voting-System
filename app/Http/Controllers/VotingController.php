@@ -6,12 +6,9 @@ use App\ExpenseCategory;
 use Auth;
 use Illuminate\Http\Request;
 
-class ExpenseCategoryController extends Controller
+class VotingController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -131,5 +128,10 @@ class ExpenseCategoryController extends Controller
 
         return redirect()->back();
             
+    }
+
+    public function position($position_id)
+    {
+        
     }
 }
