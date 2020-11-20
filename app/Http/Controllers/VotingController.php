@@ -142,7 +142,9 @@ class VotingController extends Controller
 
     public function verify($verify)
     {
-        $user = Auth::user()->id;
+        $id = Auth::user()->id;
+
+        $user = User::where('id', $id)->first();
 
         return view('vote.backend.verify', compact('verify', 'user'));
     }
