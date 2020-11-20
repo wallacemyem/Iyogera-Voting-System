@@ -185,7 +185,14 @@ class VotingController extends Controller
 
                     return view('vote.backend.elections');
 
-                    }
+                        }
+
+                    flash(translate('congratulations_for_making_a_choice'));
+
+                    return view('vote.backend.elections');
         }
+        flash(translate('congratulations_for_making_a_choice'));
+
+                    return view('vote.backend.elections');
     }
 }
