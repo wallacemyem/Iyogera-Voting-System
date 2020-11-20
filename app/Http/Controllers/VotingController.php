@@ -184,20 +184,20 @@ class VotingController extends Controller
 
                     flash(translate('congratulations_for_making_a_choice'))->success();
 
-                    return view('vote.backend.elections');
+                    return redirect()->route('elect.ion');
 
                         }else{
 
                                 flash(translate('you_cant_vote_twice'))->error();
 
-                                return view('vote.backend.elections');
+                                return redirect()->route('elect.ion');
                         }
 
                     
         }else{
                     flash(translate('wrong_answers'))->success();
 
-                    return view('vote.backend.elections');
+                    return redirect()->route('elect.ion');
         }
     }
 }
