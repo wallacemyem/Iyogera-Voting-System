@@ -161,18 +161,19 @@ class VotingController extends Controller
 
         $id = $request->id;
 
-        $nom = Nominee::where('id', $id)->first(); 
-
-        $student = Student::where('user_id', $user)->first();
-
-        $check = Result::where('student_id', $student->id)->where('nominee_id', $nom->id)->where('election_id', $nom->election_id)->first();
-
-        $position = Position::where('election_id', $nom->election_id)->first();
-
-        if ( $check != null ) {
         
 
-                if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
+        if (  $user->remember_token1 == $a1 && $user->remember_token2 == $a2 ) {
+                
+                $nom = Nominee::where('id', $id)->first(); 
+
+                $student = Student::where('user_id', $user)->first();
+
+                $check = Result::where('student_id', $student->id)->where('nominee_id', $nom->id)->where('election_id', $nom->election_id)->first();
+
+                $position = Position::where('election_id', $nom->election_id)->first();
+
+                if ( $check != null ){
 
                     $i = new Result;
                     $i->student_id = $student->id;
@@ -181,18 +182,22 @@ class VotingController extends Controller
                     $i->position_id = $nom->position_id;
                     $i->save();
 
-                    flash(translate('congratulations_for_making_a_choice'));
+                    flash(translate('congratulations_for_making_a_choice'))->success();
 
                     return view('vote.backend.elections');
 
+                        }else{
+
+                                flash(translate('you_cant_vote_twice'))->error();
+
+                                return view('vote.backend.elections');
                         }
 
-                    flash(translate('congratulations_for_making_a_choice'));
+                    
+        }else{
+                    flash(translate('wrong_answers'))->success();
 
                     return view('vote.backend.elections');
         }
-        flash(translate('congratulations_for_making_a_choice'));
-
-                    return view('vote.backend.elections');
     }
 }
