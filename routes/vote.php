@@ -22,6 +22,8 @@ Route::get('change_question', 'UserController@passwordchange');
 Route::post('change_question', 'UserController@security')->name('sec.q');
 Route::post('check_in', 'UserController@checksec')->name('sec.a');
 
+Route::get('vote/{position}','');
+
 Route::post('change_password2', 'UserController@password')->name('change.pass');
 
 Route::post('get_matric', 'UserController@check')->name('get.matric');
