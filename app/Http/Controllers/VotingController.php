@@ -133,7 +133,9 @@ class VotingController extends Controller
 
     public function position($position_id)
     {
+
         $nom = Nominee::where('position_id', $position_id)->get();
+        
 
         return view('vote.backend.voting', compact('nom'));
     }
