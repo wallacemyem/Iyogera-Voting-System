@@ -9,7 +9,7 @@
     <meta name="author" content="SitePoint">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('backend/css/notyf.min.css') }}" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('backend/css/voting.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/voting.css') }}" type="text/css">
     <script>
         /* Demo purposes only */
         $(".hover").mouseleave(
