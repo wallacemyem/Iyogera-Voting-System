@@ -67,13 +67,13 @@
                                                   <span class="badge badge-dot mr-4">
                                                     <i class="bg-warning"></i> Pending
                                                   </span>
-                                                @elseif(\Carbon\Carbon::now() > $teacher->election->start )
+                                                @elseif(\Carbon\Carbon::now() > $teacher->election->end )
                                                     <span class="badge badge-dot mr-4">
-                                                        <i class="bg-danger"></i> On-Going
+                                                        <i class="bg-success"></i> Completed
                                                         </span>
                                                 @else
                                                     <span class="badge badge-dot mr-4">
-                                                    <i class="bg-success"></i> Completed
+                                                    <i class="bg-danger"></i> On-Going
                                                     </span>
 
                                             @endif
