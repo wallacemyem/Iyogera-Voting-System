@@ -1,91 +1,73 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
-.snip1336 {
-    font-family: 'Roboto', Arial, sans-serif;
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-    min-width: 230px;
-    max-width: 315px;
-    width: 100%;
-    color: #ffffff;
-    text-align: left;
-    line-height: 1.4em;
-    background-color: #141414;
-}
-.snip1336 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-}
-.snip1336 img {
-    max-width: 100%;
-    vertical-align: top;
-    opacity: 0.85;
-}
-.snip1336 figcaption {
-    width: 100%;
-    background-color: #141414;
-    padding: 25px;
-    position: relative;
-}
-.snip1336 figcaption:before {
-    position: absolute;
-    content: '';
-    bottom: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 55px 0 0 400px;
-    border-color: transparent transparent transparent #141414;
-}
-.snip1336 figcaption a {
-    padding: 5px;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    font-size: 0.7em;
-    text-transform: uppercase;
-    margin: 10px 0;
-    display: inline-block;
-    opacity: 0.65;
-    width: 47%;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-.snip1336 figcaption a:hover {
-    opacity: 1;
-}
-.snip1336 .profile {
-    border-radius: 50%;
-    position: absolute;
-    bottom: 100%;
-    left: 25px;
-    z-index: 1;
-    max-width: 90px;
-    opacity: 1;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-.snip1336 .follow {
-    margin-right: 4%;
-    border-color: #2980b9;
-    color: #2980b9;
-}
-.snip1336 h2 {
-    margin: 0 0 5px;
-    font-weight: 300;
-}
-.snip1336 h2 span {
-    display: block;
-    font-size: 0.5em;
-    color: #2980b9;
-}
-.snip1336 p {
-    margin: 0 0 10px;
-    font-size: 0.8em;
-    letter-spacing: 1px;
-    opacity: 0.8;
+/* Lazy Load Styles */
+.card-image {
+	display: block;
+	min-height: 20rem; /* layout hack */
+	background: #fff center center no-repeat;
+	background-size: cover;
+	filter: blur(3px); /* blur the lowres image */
 }
 
+.card-image > img {
+	display: block;
+	width: 100%;
+	opacity: 0; /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+	filter: none; /* remove the blur on fullres image */
+	transition: filter 1s;
+}
+
+
+
+
+/* Layout Styles */
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-size: 16px;
+	font-family: sans-serif;
+}
+
+.card-list {
+	display: block;
+	margin: 1rem auto;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+}
+
+.card {
+	display: inline-block;
+	width: 90%;
+	max-width: 20rem;
+	margin: 1rem;
+	font-size: 1rem;
+	text-decoration: none;
+	overflow: hidden;
+	border-radius: 20px;
+	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+	display: block;
+	padding: 1em 0.5em;
+	color: #515151;
+	text-decoration: none;
+}
+
+.card-description > h2 {
+	margin: 0 0 0.5em;
+}
+
+.card-description > p {
+	margin: 0;
+}
