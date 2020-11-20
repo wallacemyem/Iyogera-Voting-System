@@ -31,9 +31,8 @@
     }
 @endphp
 @if (count($teachers) > 0)
-<div><h2> Click on your candidate to vote</h2></div>
-	<br>
-	<br>
+<div style="align:center;"><h2> Click on your candidate to vote</h2></div>
+	
 <ul class="card-list">
 
 	@foreach ( $teachers as $teacher)
