@@ -183,10 +183,13 @@ class UserController extends Controller
                         return redirect()->back();
 
                     } else {
+
+                        flash(translate('change_temporary_password'))->error();
                         return view('vote.backend.change', compact('find', 'user'));
                     }
                 } else {
-                    flash(translate('welcome'))->success();
+
+                    flash(translate('one_last_detail'))->success();
                     return view('vote.backend.check', compact('id', 'user'));
                 }
             }else{
@@ -234,6 +237,8 @@ class UserController extends Controller
             $user->temp = 0;
             $user->save();
 
+            flash(translate('security_questions_set_successfully'))->success();
+
             return redirect()->route('elect.ion');
 
     }
@@ -252,8 +257,12 @@ class UserController extends Controller
         $user = User::where('id', $id)->first();
 
         if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
+
+            flash(translate('welcome'.' '.$user->first_name.' '.$user->middle_name.' '.$user->other_name))->success();
             return redirect()->route('elect.ion');
         }else{
+
+            flash(translate('wrong_security_questions_answer'))->error();
             return view('vote.backend.check', compact('user', 'id'));
         }
     }
