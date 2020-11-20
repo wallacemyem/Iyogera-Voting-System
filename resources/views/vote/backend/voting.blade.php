@@ -20,10 +20,18 @@
     </script>
 </head>
 
-<body>
-
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <body>
+
+@php
+    if(isset($department_id) && $department_id > 0){
+        $teachers = \App\Position::get();
+    }else {
+        $teachers = \App\Position::get();
+    }
+@endphp
+@if (count($teachers) > 0)
+
 <ul class="card-list">
 	
 	<li class="card">
@@ -67,7 +75,12 @@
 	</li>
 	
 </ul>
-
+@else
+        <div style="text-align: center;">
+            <img src="{{ asset('backend/images/no-data.png') }}" alt="" class="empty-box">
+            <p>{{ translate('no_positions_found') }}</p>
+        </div>
+@endif
 <script src="{{ asset('backend/js/notyf.min.js') }}"></script>
 <script src="{{ asset('backend/js/voting.js') }}"></script>
 @foreach (session('flash_notification', collect())->toArray() as $message)
