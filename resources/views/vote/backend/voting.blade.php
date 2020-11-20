@@ -30,7 +30,7 @@
         $teachers = \App\Nominee::get();
     }
 @endphp
-@if (count($teachers) > 0)
+@if (count($nom) > 0)
 <div style="text-align:center;"><h2> Click on your candidate to vote</h2></div>
 	
 <ul class="card-list">
