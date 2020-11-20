@@ -33,15 +33,15 @@
 	<li class="card">
 	
 		@if (file_exists('images/nominee/'.$teacher->student_id.'.jpg'))
-		<a class="card-image" href="{{ route('vote.v', $teacher->id)}}" style="background-image: url({{asset('images/nominee/'.$teacher->student_id.'.jpg')}});" data-image-full="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}">
+		<a class="card-image" href="{{ route('votev.v', $teacher->id)}}" style="background-image: url({{asset('images/nominee/'.$teacher->student_id.'.jpg')}});" data-image-full="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}">
 			<img src="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}" alt="Nominee" />
 		</a>
 		@else
-		<a class="card-image" href="{{ route('vote.v', $teacher->id)}}" style="background-image: url({{ asset('images/nominee/default.jpg') }});" data-image-full="{{ asset('images/nominee/default.jpg') }}">
+		<a class="card-image" href="{{ route('votev.v', $teacher->id)}}" style="background-image: url({{ asset('images/nominee/default.jpg') }});" data-image-full="{{ asset('images/nominee/default.jpg') }}">
 			<img src="{{ asset('images/nominee/default.jpg') }}" alt="Default" />
 		</a>
 		@endif
-		<a class="card-description" href="{{ route('vote.v', $teacher->id)}}" target="_blank">
+		<a class="card-description" href="{{ route('votev.v', $teacher->id)}}" target="_blank">
 			<h2>{{ $teacher->name }}</h2>
 			<p>{{ $teacher->motto }}</p>
 		</a>
