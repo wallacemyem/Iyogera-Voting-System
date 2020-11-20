@@ -7,6 +7,8 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Nominee;
 use App\User;
+use App\Position;
+use App\Student;
 
 class VotingController extends Controller
 {
@@ -158,11 +160,11 @@ class VotingController extends Controller
 
         $id = $request->id;
 
-        $nom = Nominee::where('id', $id)->first();
-
-        $nom_id = 
+        $nom = Nominee::where('id', $id)->first(); 
 
         $student = Student::where('user_id', $user->id)->first();
+
+        $check = Position::
 
         if ( ) {
         
