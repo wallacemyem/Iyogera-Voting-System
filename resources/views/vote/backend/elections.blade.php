@@ -49,7 +49,7 @@
                             <tr>
                                         <th scope="row">
                                             <div class="media align-items-center">
-                                                <a href="{{ route('vote.p', $teacher->id)}}" class="avatar rounded-circle mr-3">
+                                                <a href="{{ route('vote.p', $teacher->id, $id)}}" class="avatar rounded-circle mr-3">
                                                     <img alt="Image placeholder" src="https://raw.githack.com/creativetimofficial/argon-dashboard/master/assets/img/theme/bootstrap.jpg">
                                                 </a>
                                                 <div class="media-body">

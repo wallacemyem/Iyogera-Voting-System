@@ -23,13 +23,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <body>
 
-@php
-    if(isset($department_id) && $department_id > 0){
-        $teachers = \App\Nominee::get();
-    }else {
-        $teachers = \App\Nominee::get();
-    }
-@endphp
+
 @if (count($nom) > 0)
 <div style="text-align:center;"><h2> Click on your candidate to vote</h2></div>
 	
