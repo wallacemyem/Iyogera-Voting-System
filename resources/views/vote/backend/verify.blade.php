@@ -16,7 +16,7 @@
                             <br>
 
                         </div>
-                        <form role="form" method="POST" action="{{ route('vot.cast') }}">
+                        <form role="form" method="POST" action="{{ route('vote.cast') }}">
                             @csrf
 
                             <div class="form-group">

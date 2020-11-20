@@ -149,7 +149,7 @@ class VotingController extends Controller
         return view('vote.backend.verify', compact('verify', 'user'));
     }
 
-    public function cast()
+    public function cast(Request $request)
     {
         # code...
     }
