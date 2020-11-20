@@ -11,10 +11,7 @@ use Illuminate\Http\Request;
 
 class InvoiceController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
     /**
      * Display a listing of the resource.
      *
@@ -171,4 +168,6 @@ class InvoiceController extends Controller
         $date_to   = strtotime($date[1].' 23:59:59');
         return view('backend.'.Auth::user()->role.'.invoice.list', compact('date_from', 'date_to'))->render();
     }
+
+
 }
