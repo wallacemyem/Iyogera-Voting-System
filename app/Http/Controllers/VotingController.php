@@ -6,6 +6,7 @@ use App\ExpenseCategory;
 use Auth;
 use Illuminate\Http\Request;
 use App\Nominee;
+use App\User;
 
 class VotingController extends Controller
 {
