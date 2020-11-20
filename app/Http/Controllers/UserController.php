@@ -259,8 +259,17 @@ class UserController extends Controller
 
         if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
 
+            $userdata = array(
+                    'email'     => $user->email,
+                    'password'  => $user->temp_pass
+                );
+
+            if (Auth::attempt($userdata)) {
+
             flash(translate('welcome'.' '.$user->first_name.' '.$user->middle_name.' '.$user->other_name))->success();
             return view('vote.backend.elections', compact('user', 'id'));
+                }
+
         }else{
 
             flash(translate('wrong_security_questions_answer'))->error();
