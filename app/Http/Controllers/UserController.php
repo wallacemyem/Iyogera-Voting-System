@@ -148,13 +148,17 @@ class UserController extends Controller
                     $user_id->temp = 0;
                     $user_id->save();
 
+                    flash(translate('password_set_successfully'))->success();
                     return view('vote.backend.sec', compact('time','id'));
 
                 } else {
-                    flash(translate('matriculation_number_not_found'))->error();
+
+                    flash(translate('password_mismatch'))->error();
                     return view('vote.backend.change', compact('find'));
                 }
         }else{
+
+            flash(translate('wrong_password'))->error();
             return view('vote.backend.change', compact('find'));
         }
     }
@@ -163,7 +167,7 @@ class UserController extends Controller
     {
             $find = $request->matric;
             $student = Student::where('code', $find)->first();
-            dd($student->user->id);
+            dd($student->level);
 
 
             $user = User::where('id', $student->user_id)->first();
@@ -180,7 +184,7 @@ class UserController extends Controller
                     return view('vote.backend.change', compact('find', 'user'));
                 }
             }else{
-                flash(translate('matriculation_number_not_found'))->error();
+                flash(translate('welcome'))->error();
                 return view('vote.backend.check');
             }
 
