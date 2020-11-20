@@ -139,4 +139,14 @@ class VotingController extends Controller
 
         return view('vote.backend.voting', compact('nom'));
     }
+
+    public function verify()
+    {
+        # code...
+    }
+
+    public function cast()
+    {
+        # code...
+    }
 }
