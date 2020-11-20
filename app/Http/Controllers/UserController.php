@@ -185,7 +185,7 @@ class UserController extends Controller
                 }
             }else{
                 flash(translate('welcome'))->success();
-                return view('vote.backend.check');
+                return view('vote.backend.check', compact('id', 'user'));
             }
 
     }
