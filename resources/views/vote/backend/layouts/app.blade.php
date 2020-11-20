@@ -33,7 +33,7 @@
         @guest()
             @include('signon.layouts.footers.guest')
         @endguest
-
+        <script src="{{ asset('backend/js/notyf.min.js') }}"></script>
         <script src="{{ asset('public/signon/') }}/vendor/jquery/dist/jquery.min.js"></script>
         <script src="{{ asset('public/signon/') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         

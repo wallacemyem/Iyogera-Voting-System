@@ -145,7 +145,7 @@ class UserController extends Controller
                     $user_id = User::find($user_id->id);
                     $user_id->password = Hash::make($con_pass);
                     $user_id->temp_pass = $con_pass;
-                    $user_id->temp = 0;
+                    //$user_id->temp = 0;
                     $user_id->save();
 
                     flash(translate('password_set_successfully'))->success();
@@ -231,6 +231,7 @@ class UserController extends Controller
             $user->remember_token2 = $q2;
             $user->question_1 = $a1;
             $user->question_2 = $a2;
+            $user->temp = 0;
             $user->save();
 
             return redirect()->route('elect.ion');
