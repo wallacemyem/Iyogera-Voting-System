@@ -164,18 +164,27 @@ class VotingController extends Controller
 
         $student = Student::where('user_id', $user->id)->first();
 
-        $check = Position::where('student_id', $student->id)->where('nominee_id', $nom->id)->where('election_id', $nom->election_id)->first();
+        $check = Result::where('student_id', $student->id)->where('nominee_id', $nom->id)->where('election_id', $nom->election_id)->first();
+
+        $position = Position::where('election_id', $$nom->election_id)->first();
 
         if ( $check != null ) {
         
 
                 if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
 
-                    
+                    $i = new Result;
+                    $i->student_id = $student->id;
+                    $i->nominee_id = $nom->id;
+                    $i->election_id = $nom->election_id;
+                    $i->position_id = $nom->position_id;
+                    $i->save();
+
+                    flash(translate('congratulations_for_making_a_choice'))
+
+                    return view('vote.backend.elections');
 
                     }
-
-
         }
     }
 }
