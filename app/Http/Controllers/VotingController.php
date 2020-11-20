@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\ExpenseCategory;
 use Auth;
 use Illuminate\Http\Request;
+use App\Nominee;
 
 class VotingController extends Controller
 {
