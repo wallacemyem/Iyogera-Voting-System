@@ -19,7 +19,7 @@ Route::post('change_question', 'UserController@security')->name('sec.q');
 Route::post('check_in', 'UserController@checksec')->name('sec.a');
 
 Route::get('vote/{position}','VotingController@position')->name('vote.p');
-Route::get('votev/{verify}','VotingController@verify')->name('vote.v');
+Route::get('votev/{verify}','VotingController@verify')->name('votev.v');
 Route::post('vote/{cast}','VotingController@cast')->name('vote.cast');
 
 Route::post('change_password2', 'UserController@password')->name('change.pass');
