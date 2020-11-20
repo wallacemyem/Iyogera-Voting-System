@@ -33,6 +33,7 @@ class UserController extends Controller
             $user->email = $request->first_name.'.'.$request->other_name.'@iyogera.com';
             $user->password = Hash::make($rad_code);
             $user->role = "voter";
+            $user->temp_pass = $rad_code;
             //$user->gender = $request->gender;
             $user->school_id = school_id();
             $user->save();
