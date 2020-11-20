@@ -152,6 +152,22 @@ class VotingController extends Controller
 
     public function cast(Request $request)
     {
-        # code...
+        //$id = $request->id;
+        $a1 = $request->a1;
+        $a2 = $request->a2;
+
+        $id = $request->id;
+
+        $user = User::where('id', $id)->first();
+
+        if ( ) {
+        
+
+        if ( $user->remember_token1 == $a1 && $user->remember_token2 == $a2){
+
+            }
+
+
+        }
     }
 }
