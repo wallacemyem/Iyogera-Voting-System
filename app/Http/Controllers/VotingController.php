@@ -144,7 +144,7 @@ class VotingController extends Controller
     {
         $user = Auth::user()->id;
 
-        
+        return view('vote.backend.verify', compact('verify', 'user'));
     }
 
     public function cast()
