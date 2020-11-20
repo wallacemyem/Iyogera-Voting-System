@@ -162,7 +162,7 @@ class VotingController extends Controller
 
         $nom = Nominee::where('id', $id)->first(); 
 
-        $student = Student::where('user_id', $user->id)->first();
+        $student = Student::where('user_id', $user)->first();
 
         $check = Result::where('student_id', $student->id)->where('nominee_id', $nom->id)->where('election_id', $nom->election_id)->first();
 
