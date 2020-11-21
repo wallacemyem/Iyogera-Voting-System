@@ -240,7 +240,7 @@ class UserController extends Controller
 
             flash(translate('security_questions_set_successfully'))->success();
 
-            return redirect()->route('elect.ion');
+            return view('vote.backend.vue');
 
     }
 
