@@ -173,7 +173,7 @@ class VotingController extends Controller
 
                 $position = Position::where('election_id', $nom->election_id)->first();
 
-                if ( $check != null ){
+                if ( $check == null ){
 
                     $i = new Result;
                     $i->student_id = $student->id;
