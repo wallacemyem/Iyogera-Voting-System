@@ -13,6 +13,12 @@ class AddonController extends Controller
 {
 
     public function onstart(){
+        
+        Auth::logout(); 
+
+        session(['role' => '']); 
+
+        Session::flush();
 
         return view('vote.backend.vue');
     }
