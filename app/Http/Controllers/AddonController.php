@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use ZipArchive;
 use DB;
 use Auth;
+use Session;
 
 class AddonController extends Controller
 {
