@@ -25,6 +25,7 @@ class AddonController extends Controller
             }else{
             return view('vote.backend.vue');
     }
+        }
 
     public function vote(Request $request)
     {
