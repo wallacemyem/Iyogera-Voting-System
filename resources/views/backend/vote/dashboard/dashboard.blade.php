@@ -111,11 +111,14 @@
                             <div class="text-center">
                                 <h3 class="font-weight-normal text-white mb-2">
                                     @php
-                                        $attendance = \App\DailyAttendance::where('timestamp', strtotime(date('Y-m-d')))->where('school_id', school_id())->where('status', 1)->get();
-                                        echo count($attendance);
-                                    @endphp
+
+                                                    $teacher2s = \App\User::where(['school_id' => school_id(), 'temp' => '0'])->get();
+
+                                                  echo count($teacher2s);
+
+                                                @endphp
                                 </h3>
-                                <p class="text-light text-uppercase font-13 font-weight-bold">{{ count($attendance) }} {{ translate('student') }}</p>
+                                <p class="text-light text-uppercase font-13 font-weight-bold">{{ translate('students') }}</p>
                                 <a href="#" class="btn btn-outline-light btn-sm mb-1">{{ translate('go_to_users') }}
                                     <i class="mdi mdi-arrow-right ml-1"></i>
                                 </a>
