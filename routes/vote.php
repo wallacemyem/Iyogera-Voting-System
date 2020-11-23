@@ -40,8 +40,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('position', 'PositionController');
 
-    Route::get('vote/result', function () {
-        return view('backend.vote.results');
-    })->name('vote.result');
+    Route::resource('result', 'ResultController');
+
+
 
 });
