@@ -4,14 +4,7 @@
         <div class="slimscroll-menu">
 
             <!-- LOGO -->
-            <a href="#" class="logo text-center">
-                <span class="logo-lg">
-                <img src="{{asset('backend/images/logo-dark.png')}}" alt="" height="50">
-                </span>
-                <span class="logo-sm">
-                <img src="{{asset('backend/images/logo-dark.png')}}" alt="" height="16">
-                </span>
-            </a>
+            
             <!--- Sidemenu -->
             <ul class="metismenu side-nav side-nav-light">
                 <li class="side-nav-title side-nav-item">Navigation</li>
