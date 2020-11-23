@@ -29,6 +29,10 @@
                                     </div>
                                     <p class="small text-muted mb-0">{{ $teacher->description }}</p>
                                 </div>
+                                 @php
+                                 $nomi = \App\Result::where('nominee_id', $teacher->id)->where('position_id', $teacher->position->id)->count();
+                                 @endphp
+                                 <h2>{{ $nomi }}</h2>
                             </div>
                         </div>
                     </div>
