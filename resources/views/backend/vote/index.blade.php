@@ -18,7 +18,7 @@
                 <div class="card-body">
                     
                     <div id = "teacher_content">
-                        @include('backend.'.Auth::user()->role.'.nom.list')
+                        @include('backend.'.Auth::user()->role.'.list')
                     </div> <!-- end table-responsive-->
                 </div> <!-- end card body-->
             </div> <!-- end card -->
