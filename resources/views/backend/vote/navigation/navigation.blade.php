@@ -37,7 +37,7 @@
                 </li>
 
                 <li class="side-nav-item">
-                    <a href="{{ route('result.result') }}" class="side-nav-link">
+                    <a href="{{ route('result.index') }}" class="side-nav-link">
                         <i class="em em-writing_hand" aria-role="presentation" aria-label=""></i>
                         <span> Results </span>
                     </a>
