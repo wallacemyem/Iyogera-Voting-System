@@ -32,7 +32,7 @@
                                  @php
                                  $nomi = \App\Result::where('nominee_id', $teacher->id)->where('position_id', $teacher->position->id)->count();
                                  @endphp
-                                 <h2>{{ $nomi }}</h2>
+                                <small>number of votes: </small> <h2>{{ $nomi }}</h2>
                             </div>
                         </div>
                     </div>
