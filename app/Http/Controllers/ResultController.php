@@ -26,7 +26,7 @@ class ResultController extends Controller
     {
         $title = translate('Results');
 
-        return view('backend.'.Auth::user()->role.'.result.index', compact('title'));
+        return view('backend.'.Auth::user()->role.'.index', compact('title'));
     }
 
     /**
