@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box ">
-                <h4 class="page-title"> <i class="mdi mdi-account-circle title_icon"></i> {{ translate('nominees') }}
+                <h4 class="page-title"> <i class="mdi mdi-account-circle title_icon"></i> {{ translate('results') }}
                
                 </h4>
             </div>
