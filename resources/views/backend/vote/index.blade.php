@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="page-title-box ">
                 <h4 class="page-title"> <i class="mdi mdi-account-circle title_icon"></i> {{ translate('nominees') }}
-                <button type="button" class="btn btn-icon btn-success btn-rounded alignToTitle" onclick="showAjaxModal('{{ route('nominee.create') }}', '{{ translate('create_new_nominee') }}')"> <i class="mdi mdi-plus"></i> {{  translate('add_new_nominee') }}</button>
+               
                 </h4>
             </div>
         </div>
