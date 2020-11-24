@@ -29,6 +29,9 @@ Route::get('get_matric', 'UserController@check');
 
 Route::get('on_start', 'AddonController@onstart');
 
+Route::get('results', 'AddonController@results');
+Route::post('on_r', 'AddonController@onresult')->name('on.r');
+
 Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('user', 'UserController');
