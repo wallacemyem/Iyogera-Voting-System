@@ -9,6 +9,7 @@ use ZipArchive;
 use DB;
 use Auth;
 use Session;
+use App\Result;
 
 class AddonController extends Controller
 {
@@ -42,7 +43,9 @@ class AddonController extends Controller
     public function onresult(Request $request)
     {
         $election_id = $request->election_id;
-        $position_id = $request->position_id;
+
+        $nom = Nominee::where('election_id', $election_id)->get();
+        return view('vote.backend.result', compact('nom'));
 
     }
 }
