@@ -16,7 +16,7 @@
 
                         <div class="text-center text-muted mb-4">
 
-                            {{ __(' Add Security Question') }}
+                            {{ __(' Select Elections and Position') }}
 
                             <br>
 
@@ -48,22 +48,6 @@
 
                             </div>
 
-                            <div class="form-group">
-
-                                <div class="input-group input-group-alternative">
-
-                                    <div class="input-group-prepend">
-
-                                        <span class="input-group-text"></span>
-
-                                    </div>
-
-                                    <input class="form-control" name="a1" placeholder="{{ __('Your Answer') }}" type="text" value="" required>
-
-                                </div>
-
-                            </div>
-
                             <div class="dropdown">
 
                                 <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
@@ -85,28 +69,6 @@
                                     </select>
 
                                 </div>
-
-                            </div>
-
-                            <div class="form-group">
-
-                                <div class="input-group input-group-alternative">
-
-                                    <div class="input-group-prepend">
-
-                                        <span class="input-group-text"></span>
-
-                                    </div>
-
-                                    <input class="form-control" name="a2" placeholder="{{ __('Your Answer') }}" type="text" value="" required>
-
-                                </div>
-
-                            </div>
-
-                            <div>
-
-                                <input type="hidden" class="form-control" name="id"  value="{{$id}}" >
 
                             </div>
 
