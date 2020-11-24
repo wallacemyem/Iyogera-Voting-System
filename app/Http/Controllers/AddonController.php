@@ -35,7 +35,7 @@ class AddonController extends Controller
 
     public function results()
     {
-        return view('vote.backend.selectr'):
+        return view('vote.backend.selectr');
 
     }
 
