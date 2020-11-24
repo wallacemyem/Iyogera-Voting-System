@@ -34,7 +34,7 @@
 
                                         <option value="all">{{ __('Select an Election') }}</option>
 
-                                         @foreach (App\Election::where('school_id', school_id())->get() as $class)
+                                         @foreach (App\Election::where('school_id', 6)->get() as $class)
 
                                          <option value="{{ $class->id }}">{{ $class->name }}</option>
 
