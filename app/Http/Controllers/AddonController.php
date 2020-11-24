@@ -9,7 +9,7 @@ use ZipArchive;
 use DB;
 use Auth;
 use Session;
-use App\Result;
+use App\Nominee;
 
 class AddonController extends Controller
 {
