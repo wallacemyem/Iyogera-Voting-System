@@ -41,7 +41,63 @@
         <script src="{{ asset('public/signon/') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="{{ asset('backend/js/notyf.min.js') }}"></script>
         @stack('js')
-        
+     
+
+    <script>
+
+        var form;
+
+        function classWiseSection(election_id) {
+
+            if(election_id > 0) {
+
+            }else {
+
+                console.log(123);
+
+            }
+
+            var url = '{{ route("section.show", "election_id") }}';
+
+            url = url.replace('election_id', election_id);
+
+            $.ajax({
+
+                type : 'GET',
+
+                url: url,
+
+                success : function(response) {
+
+                    $('#section_content').html(response);
+
+                }
+
+            });
+
+        }
+
+        function onChangeSection(position_id) {
+
+        }
+
+        $(".ajaxForm").validate({});
+
+        $("#single_admission").submit(function(e) {
+
+            form = $(this);
+
+            ajaxSubmit(e, form, refreshForm);
+
+        });
+
+        var refreshForm = function () {
+
+            form.trigger("reset");
+
+        }
+
+    </script>
         <!-- Argon JS -->
         <script src="{{ asset('public/signon/') }}/js/argon.js?v=1.0.0"></script>
         @foreach (session('flash_notification', collect())->toArray() as $message)
