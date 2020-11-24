@@ -32,4 +32,17 @@ class AddonController extends Controller
         $add = $request->add;
 
     }
+
+    public function results()
+    {
+        return view('vote.backend.selectr'):
+
+    }
+
+    public function onresult(Request $request)
+    {
+        $election_id = $request->election_id;
+        $position_id = $request->position_id;
+
+    }
 }
