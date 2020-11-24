@@ -30,17 +30,15 @@
 
                                 <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
 
-                                    <select class="form-control" name="q1" id="q1">
+                                    <select class="form-control" name="election_id" id="election_id">
 
-                                        <option value="all">{{ __('Select a Question') }}</option>
+                                        <option value="all">{{ __('Select an Election') }}</option>
 
-                                            <option value="1">What primary school did you attend?</option>
+                                         @foreach (App\Election::where('school_id', school_id())->get() as $class)
 
-                                            <option value="2">What is the middle name of your oldest sibling?</option>
+                                         <option value="{{ $class->id }}">{{ $class->name }}</option>
 
-                                             <option value="3">In what town or city did your parents meet?</option>
-
-                                            <option value="4">What is your favorite color?</option>
+                                         @endforeach
 
                                     </select>
 
@@ -48,27 +46,7 @@
 
                             </div>
 
-                            <div class="dropdown">
-
-                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
-
-                                    <select class="form-control" name="q2" id="q2">
-
-                                        <option value="all">{{ __('Select a Question') }}</option>
-
-                                        <option value="5">In what city were you born?</option>
-
-                                        <option value="6">What is your work address?</option>
-
-                                        <option value="7">What was the name of your first pet?</option>
-
-                                        <option value="8">What is your favorite sport?</option>
-
-                                        <option value=""></option>
-
-                                    </select>
-
-                                </div>
+                            <div class="form-group col-md-12" id="section_content">
 
                             </div>
 
@@ -91,3 +69,61 @@
     </div>
 
 @endsection
+@section('js')
+
+    <script>
+
+        var form;
+
+        function classWiseSection(election_id) {
+
+            if(election_id > 0) {
+
+            }else {
+
+                console.log(123);
+
+            }
+
+            var url = '{{ route("section.show", "election_id") }}';
+
+            url = url.replace('election_id', election_id);
+
+            $.ajax({
+
+                type : 'GET',
+
+                url: url,
+
+                success : function(response) {
+
+                    $('#section_content').html(response);
+
+                }
+
+            });
+
+        }
+
+        function onChangeSection(position_id) {
+
+        }
+
+        $(".ajaxForm").validate({});
+
+        $("#single_admission").submit(function(e) {
+
+            form = $(this);
+
+            ajaxSubmit(e, form, refreshForm);
+
+        });
+
+        var refreshForm = function () {
+
+            form.trigger("reset");
+
+        }
+
+    </script>
+    @endsection
