@@ -45,7 +45,7 @@ class AddonController extends Controller
         $election_id = $request->election_id;
 
         $nom = Nominee::where('election_id', $election_id)->get();
-        return view('vote.backend.result', compact('nom'));
+        return view('vote.backend.results', compact('nom'));
 
     }
 }
