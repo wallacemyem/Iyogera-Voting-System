@@ -10,6 +10,7 @@ use App\User;
 use App\Position;
 use App\Student;
 use App\Result;
+use App\Election;
 
 class VotingController extends Controller
 {
@@ -165,39 +166,51 @@ class VotingController extends Controller
 
         if (  $user->remember_token1 == $a1 && $user->remember_token2 == $a2 ) {
                 
-                $nom = Nominee::where('id', $id)->first(); 
+                $nom = Nominee::where('id', $id)->first();
+
+                $election = Election::where('id', 8)->first(); 
 
                 $student = Student::where('user_id', $user->id)->first();
 
                 $check = Result::where('student_id', $student->id)->where('nominee_id', $nom->id)->where('election_id', $nom->election_id)->first();
 
                 $position = Position::where('election_id', $nom->election_id)->first();
+                if ( $election->status == 0 ) {
+                   
 
-                if ( $check == null ){
+                        if ( $check == null ){
 
-                    $i = new Result;
-                    $i->student_id = $student->id;
-                    $i->nominee_id = $nom->id;
-                    $i->election_id = $nom->election_id;
-                    $i->position_id = $nom->position_id;
-                    $i->save();
+                            $i = new Result;
+                            $i->student_id = $student->id;
+                            $i->nominee_id = $nom->id;
+                            $i->election_id = $nom->election_id;
+                            $i->position_id = $nom->position_id;
+                            $i->save();
 
-                    flash(translate('congratulations_for_making_a_choice'))->success();
+                            flash(translate('congratulations_for_making_a_choice'))->success();
 
-                    return redirect()->route('elect.ion');
+                            return redirect()->route('elect.ion');
 
-                        }else{
+                                }else{
 
-                                flash(translate('you_cant_vote_twice'))->error();
+                                        flash(translate('you_cant_vote_twice'))->error();
 
-                                return redirect()->route('elect.ion');
-                        }
+                                        return redirect()->route('elect.ion');
+                                }
 
-                    
+                            
+                }else{
+                            flash(translate('wrong_answers'))->error();
+
+                            return redirect()->route('elect.ion');
+                }
+
         }else{
-                    flash(translate('wrong_answers'))->success();
 
-                    return redirect()->route('elect.ion');
+            flash(translate('elections_closed'))->error();
+
+                            return redirect()->route('elect.ion');
+
         }
     }
 }
