@@ -41,7 +41,7 @@
 			<img src="{{ asset('images/nominee/default.jpg') }}" alt="Default" />
 		</a>
 		@endif
-		<a class="card-description" href="{{ route('votev.v', $teacher->id)}}" target="_blank">
+		<a class="card-description" href="{{ route('votev.v', $teacher->id)}}">
 			<h2>{{ $teacher->name }}</h2>
 			<p>{{ $teacher->motto }}</p>
 		</a>
