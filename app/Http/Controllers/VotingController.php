@@ -200,14 +200,14 @@ class VotingController extends Controller
 
                             
                 }else{
-                            flash(translate('wrong_answers'))->error();
+                            flash(translate('voting_closed'))->error();
 
                             return redirect()->route('elect.ion');
                 }
 
         }else{
 
-            flash(translate('voting_closed'))->error();
+            flash(translate('wrong_answers'))->error();
 
                             return redirect()->route('elect.ion');
 
