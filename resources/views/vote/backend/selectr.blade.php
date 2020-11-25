@@ -22,7 +22,7 @@
 
                         </div>
 
-                        <form role="form" method="POST" action="{{ route('sec.q') }}">
+                        <form role="form" method="POST" action="{{ route('on.r') }}">
 
                             @csrf
 
