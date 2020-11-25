@@ -74,8 +74,8 @@
 
 			<h2>{{ $teacher->name }}</h2>
 
-			<p><strong>{{ $teacher->motto }}</strong></p>
-            <p>number of vote(s)</p>
+			<p>{{ $teacher->motto }}</p>
+            <p><strong>number of vote(s)</strong></p>
 
             <h1>
                 <p>
