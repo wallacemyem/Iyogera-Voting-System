@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('signon.layouts.headers.guest')
+    @include('signon.layouts.headers.result')
 
     <div class="container mt--8 pb-5">
 
