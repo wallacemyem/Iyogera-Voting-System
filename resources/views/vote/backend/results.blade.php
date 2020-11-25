@@ -75,6 +75,7 @@
 			<h2>{{ $teacher->name }}</h2>
 
 			<p>{{ $teacher->motto }}</p>
+            <p>number of vote(s)</p>
 
             <h1>
                 <p>
