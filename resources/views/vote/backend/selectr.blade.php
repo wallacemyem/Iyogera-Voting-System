@@ -69,10 +69,7 @@
 
     </div>
 
-@endsection
-@section('js')
-
-    <script>
+        <script>
 
         var form;
 
@@ -127,4 +124,6 @@
         }
 
     </script>
-    @endsection
+
+@endsection
+
