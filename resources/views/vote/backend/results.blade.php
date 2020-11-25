@@ -42,7 +42,7 @@
 
 @if (count($nom) > 0)
 
-<div style="text-align:center;"><h2> Click on your candidate to vote</h2></div>
+<div style="text-align:center;"><h2> Results</h2></div>
 
 	<ul class="card-list">
 
@@ -54,7 +54,7 @@
 
 		@if (file_exists('images/nominee/'.$teacher->student_id.'.jpg'))
 
-		<a class="card-image" href="{{ route('votev.v', $teacher->id)}}" style="background-image: url({{asset('images/nominee/'.$teacher->student_id.'.jpg')}});" data-image-full="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}">
+		<a class="card-image" href="#" style="background-image: url({{asset('images/nominee/'.$teacher->student_id.'.jpg')}});" data-image-full="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}">
 
 			<img src="{{asset('images/nominee/'.$teacher->student_id.'.jpg')}}" alt="Nominee" />
 
@@ -62,7 +62,7 @@
 
 		@else
 
-		<a class="card-image" href="{{ route('votev.v', $teacher->id)}}" style="background-image: url({{ asset('images/nominee/default.jpg') }});" data-image-full="{{ asset('images/nominee/default.jpg') }}">
+		<a class="card-image" href="#" style="background-image: url({{ asset('images/nominee/default.jpg') }});" data-image-full="{{ asset('images/nominee/default.jpg') }}">
 
 			<img src="{{ asset('images/nominee/default.jpg') }}" alt="Default" />
 
@@ -70,7 +70,7 @@
 
 		@endif
 
-		<a class="card-description" href="{{ route('votev.v', $teacher->id)}}" target="_blank">
+		<a class="card-description" href="#">
 
 			<h2>{{ $teacher->name }}</h2>
 
