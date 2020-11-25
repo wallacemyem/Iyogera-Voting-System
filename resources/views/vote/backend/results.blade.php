@@ -76,12 +76,14 @@
 
 			<p>{{ $teacher->motto }}</p>
 
-            <p>
+            <h1>
+                <p>
                 @php
                  $nomi = \App\Result::where('nominee_id', $teacher->id)->where('position_id', $teacher->position->id)->count();
                 @endphp
                 {{ $nomi }}
-            </p>
+                </p>
+            </h1>
 
 		</a>
 
