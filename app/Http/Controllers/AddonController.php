@@ -10,6 +10,7 @@ use DB;
 use Auth;
 use Session;
 use App\Nominee;
+use App\Result;
 
 class AddonController extends Controller
 {
@@ -43,8 +44,10 @@ class AddonController extends Controller
     public function onresult(Request $request)
     {
         $election_id = $request->election_id;
+        $position_id = $request->position_id;
 
-        $nom = Nominee::where('election_id', $election_id)->get();
+        $nom = Nominee::where('election_id', $election_id)->where('position_id', $position_id)->get();
+
         return view('vote.backend.results', compact('nom'));
 
     }
