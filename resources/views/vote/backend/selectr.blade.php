@@ -44,7 +44,15 @@
 
                                 </div>
 
-                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0" id="section_content">
+                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0" name="position_id" id="position_id">
+
+                                    <option value="all">{{ __('Select Position') }}</option>
+
+                                         @foreach (App\Position::get() as $classs)
+
+                                         <option value="{{ $classs->id }}">{{ $classs->name }}</option>
+
+                                         @endforeach
 
                             </div>
 
@@ -53,7 +61,7 @@
 
                             <div class="text-center">
 
-                                <button type="submit" class="btn btn-primary my-4">{{ __('Sign in') }}</button>
+                                <button type="submit" class="btn btn-primary my-4">{{ __('Search') }}</button>
 
                             </div>
 
