@@ -107,16 +107,6 @@
 
         }
 
-        $(".ajaxForm").validate({});
-
-        $("#single_admission").submit(function(e) {
-
-            form = $(this);
-
-            ajaxSubmit(e, form, refreshForm);
-
-        });
-
         var refreshForm = function () {
 
             form.trigger("reset");
