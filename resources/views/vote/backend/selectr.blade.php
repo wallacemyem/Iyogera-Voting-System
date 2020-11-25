@@ -44,11 +44,12 @@
 
                                 </div>
 
-                            </div>
-
-                            <div class="form-group col-md-12" id="section_content">
+                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0" id="section_content">
 
                             </div>
+
+                            </div>
+
 
                             <div class="text-center">
 
