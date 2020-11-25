@@ -175,7 +175,7 @@ class VotingController extends Controller
                 $check = Result::where('student_id', $student->id)->where('nominee_id', $nom->id)->where('election_id', $nom->election_id)->first();
 
                 $position = Position::where('election_id', $nom->election_id)->first();
-                if ( $election->status == 0 ) {
+                if ( $election->status == 1 ) {
                    
 
                         if ( $check == null ){
@@ -207,7 +207,7 @@ class VotingController extends Controller
 
         }else{
 
-            flash(translate('elections_closed'))->error();
+            flash(translate('voting_closed'))->error();
 
                             return redirect()->route('elect.ion');
 
