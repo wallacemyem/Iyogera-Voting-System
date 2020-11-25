@@ -44,7 +44,8 @@
 
                                 </div>
 
-                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0" name="position_id" id="position_id">
+                                <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0" >
+                                    <select class="form-control" name="position_id" id="position_id">
 
                                     <option value="all">{{ __('Select Position') }}</option>
 
@@ -53,6 +54,7 @@
                                          <option value="{{ $classs->id }}">{{ $classs->name }}</option>
 
                                          @endforeach
+                                     </select>
 
                             </div>
 
